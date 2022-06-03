@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  description: CSMP NMS Interface. RFC 2119 language is used to indicate normative statements. 
+  version: 1.0.1
+  title: CSMP NMS Interface
+
+servers:
+  #
+  # Placeholder for the actual nms-url.
+  #
+  - url: 'https://virtserver.swaggerhub.com/woobagooba/CsmpNms/1.0.0'
+  
+paths:
+  /r:
+    post:
+      description: Device registration POST to the NMS. RequestBody MAY include any of the RegistrationRequest TLVs (see CsmpComponents). RequestBody MUST include DeviceID and CurrentTime TLVs. POSTs to this address MUST be CON (acknowledged).
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/RegistrationRequestTLVs'
+      responses:
+        '203':
+          description: Successful registration response to device. 
+            The response MAY include any of the RegistrationResponse TLVs (see CsmpComponents).
+          content:
+            application/octet-stream:
+              schema:
+                $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/RegistrationResponseTLVs'
+        '403':
+          description: Duplicate DeviceID was received or DeviceID was not recognized or authorized by the NMS.  There is no payload in this response.
+        '404':
+          description: Multiple Session IDs were found for the device.  There is no payload for this response.
+  /c:
+    post:
+      description: Devices POST periodic metrics, command responses, events, and asychronous GET responses to the NMS. A POST to this address MUST be NON (non acknowledged ... to avoid excessive acknowledgement, 4.03 or 4.04 conditions are handled silently by the NMS). RequestBody MAY include any of TLVsPOSTAbleToNms TLVs (see CsmpComponents).  The RequestBody MUST include the CurrentTime and SessionID TLVs (see CsmpComponents).  
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/TLVsPostAbleToNMS'
+      responses:
+        '100':
+          description: There is no response to this (NON) request (100 is used to indicate no response).

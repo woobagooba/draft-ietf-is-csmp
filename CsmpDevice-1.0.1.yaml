@@ -1,0 +1,148 @@
+openapi: 3.0.0
+info:
+  description: |
+    CSMP Device Interface.  RFC 2119 language is used to indicate normative statements.
+  version: 1.0.1
+  title: CSMP Device Interface
+servers:
+  #
+  # Placeholder for the actual device-url
+  #
+  - url: 'https://virtserver.swaggerhub.com/woobagooba/CsmpDevice/1.0.1'
+  
+paths:
+  /c:
+    get:
+      description: |
+        Retrieve TlvIndex TLV or specific list of TLVs from a device.
+      parameters:
+      - $ref: '#/components/parameters/qOption'
+      - $ref: '#/components/parameters/aOption'
+      - $ref: '#/components/parameters/rOption'
+      
+      responses:
+        '205':
+          description: |
+            Successful return of requested TLVs or TlvIndex. Device MUST return the requested specific TLVs when the "q" param is included (full tables are allowed). Device MUST return only TlvIndex when the "q" param is omitted.
+          content:
+            application/octet-stream:
+              schema:
+                oneOf:
+                - $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/TLVsGETFromDevice'
+                - $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/TlvIndex' 
+        '400':
+          description: Bad Request.
+        '401':
+          description: Unauthorized.
+        '402':
+          description: Bad option.
+        '403':
+          description: TLV not found, response won't fit in MTU.
+        '404':
+          description: Not found.          
+        '405':
+          description: Method not allowed.
+          
+    post:
+      description: Process TLV updates from the NMS.  The q option MUST NOT be used. A device MUST process the following TLVs (if present and in order) ...
+        1. Signature – verify the message signature.
+        2. SignatureValidity – verify if the signature is still valid. 
+        3. GroupMatch – check if the device belongs to the group for which the packet is intended.
+        4. The TLVs to be updated.
+      parameters:
+      - $ref: '#/components/parameters/aOption'
+      - $ref: '#/components/parameters/rOption'
+      
+      requestBody:
+        description: One or more TLVs to be POSTed to the device.
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/TLVsPOSTableToDevice'
+      responses:
+        '201':
+          description: TLVs have been updated.
+        '400':
+          description: Bad Request.
+        '401':
+          description: Unauthorized.
+        '402':
+          description: Bad option.
+        '403':
+          description: Forbidden.
+        '404':
+          description: Not found.          
+        '405':
+          description: Method not allowed.
+          
+  /c/{tlvIdPath}:
+    get:
+      description: |
+        Retrieve single TLV from a device.    
+      parameters:
+      - $ref: '#/components/parameters/tlvIdPath'
+      - $ref: '#/components/parameters/aOption'
+      - $ref: '#/components/parameters/rOption'
+
+      responses:
+        '205':
+          description: Return the requested TLV.  Full table retreival is allowed.
+          content:
+            application/octet-stream:
+              schema:
+                $ref: 'https://api.swaggerhub.com/domains/woobagooba/CSMPComponents/1.0#/components/schemas/TLVsGETFromDevice'
+        '400':
+          description: Bad Request.
+        '401':
+          description: Unauthorized.
+        '402':
+          description: Bad option.
+        '403':                
+          description: TLV not found, response won't fit in MTU.          
+        '404':
+          description: Not found.          
+        '405':
+          description: Method not allowed.          
+    #
+    # Note that POST is not permitted on this URL.
+    #
+#
+# Query parameters used for device requests.
+#
+components:  
+  parameters:
+    qOption:
+      description: |
+        Q option for request to device for one or more specific TLVs. When present in a request, the response payload MUST contain the requested TLVs. If a TLV does not exist on the device, it MUST NOT be returned in the response and no error should be indicated.
+      in: query
+      name: q
+      required: false
+      schema:
+        type: string
+        description: Format is <tlvID1>+<tlvID2>+<tlvID3>+...  
+    aOption:
+      description: |
+        A option. When omitted, the request MUST be CON. When present, request MUST be NON and the device MUST wait random interval from time of receipt up to "a" seconds before responding with a NON POST to <nms-url>/c. This form is often used with multicast requests to devices, but may also be used for unicast requests to devices.
+      in: query
+      name: a
+      required: false
+      schema:
+        type: integer
+        description: The device will wait random interval from receipt up to "a" seconds before sending 
+    rOption:
+      description: |
+        R option MAY be used with the A option to indicate device MUST respond with a NON POST to specified URL (overriding <nms-url>/c).
+      in: query
+      name: r
+      required: false
+      schema:
+        type: string    
+
+    tlvIdPath:
+      description: Path param specifying TLV ID.
+      in: path
+      name: tlvIdPath
+      required: true 
+      schema:
+        type: integer

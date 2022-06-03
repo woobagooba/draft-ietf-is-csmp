@@ -1,0 +1,1626 @@
+syntax = "proto3";
+
+/*
+The definitions for CSMP TLVs.
+
+This file is directly consumable by the Protocol Buffer tool chain.
+Requirements are specified using the terminology and conventions as referenced in [RFC2119].
+Requirements key words referenced in [RFC2119] must be capitalized.
+Full details re: Protocol Buffers are accessible at https://developers.google.com/protocol-buffers
+*/
+
+/*
+CSMP TLV ID Mapping to Protocol Buffer messages.
+
+A unique TLV ID MUST be assigned to each CSMP Protocol Buffer message (defined within).
+An unused TLV ID MAY be assigned to a new message. The new TLV ID assignment MUST be recorded within, along with the defintion of the new message.
+A Reserved TLV ID MUST NOT be assigned to a message.
+An existing TLV ID assignment MUST NOT be re-assigned to a new message.
+
+NOTE the legend.
+
+- Unused:   available for assignment.
+- Reserved: not available for assignment.
+- All other named messages are currently used by CSMP for generic and RF Mesh device management.
+
+All TLV assignments MUST be recorded in the table below.  Take care to maintain the numbering.
+
+TLVID   Message
+1       TlvIndex
+2       DeviceID
+3       Reserved
+4       Unused
+5       Unused
+6       NMSRedirectRequest
+7       SessionID
+8       DescriptionRequest
+9       Unused
+10	    Reserved
+11	    HardwareDesc
+12	    InterfaceDesc
+13	    ReportSubscribe
+14	    Reserved
+15	    Reserved
+16	    IPAddress
+17	    IPRoute
+18	    CurrentTime
+19	    Reserved
+20	    Reserved
+21	    RPLSettings
+22	    Uptime
+23	    InterfaceMetrics
+24	    Reserved
+25	    IPRouteRPLMetrics
+26	    Unused
+27-29   Reserved
+30	    PingRequest
+31	    PingResponse
+32	    RebootRequest
+33	    Ieee8021xStatus
+34	    Ieee80211iStatus
+35	    WPANStatus
+36	    DHCP6ClientStatus
+37-41   Reserved
+42	    NMSSettings
+43	    NMSStatus
+44-46   Reserved
+47	    Ieee8021xSettings
+48	    Ieee802154BeaconStats
+49-52   Reserved
+53	    RPLInstance
+54	    Reserved
+55	    GroupAssign
+56	    GroupEvict
+57	    GroupMatch
+58	    GroupInfo
+59      Unused
+60      Unused
+61	    Reserved
+62	    LowpanMacStats
+63	    LowpanPhySettings
+64      Unused
+65	    TransferRequest
+66	    Reserved
+67	    ImageBlock
+68	    LoadRequest
+69	    CancelLoadRequest
+70	    SetBackupRequest
+71	    TransferResponse
+72	    LoadResponse
+73	    CancelLoadResponse
+74	    SetBackupResponse
+75	    FirmwareImageInfo
+76	    SignatureValidity
+77	    Signature
+78	    Reserved
+79	    SignatureSettings
+80	    Reserved
+81	    Reserved
+82      Unused
+83      Unused
+84	    Reserved
+85      Unused
+86	    SysResetStats
+87      Unused
+88	    Reserved
+89      Unused
+90      Unused
+91-97   Reserved
+98      Unused
+99      Unused
+100	    Reserved
+101     Unused
+102     Unused
+103     Unused
+104     Unused
+105     Unused
+106     Unused
+107	    Reserved
+108	    Reserved
+109     Unused
+110-112 Reserved
+113     Unused
+114     Unused
+115-117 Reserved
+118     Unused
+119     Unused
+120-122 Reserved
+123     Unused
+124	    NetStat
+125	    Reserved
+126	    Reserved
+127     Vendor Defined TLV
+128-131 Reserved
+132-139 Unused
+140	    Reserved
+141	    NetworkRole
+142-151 Reserved
+152-154 Unused
+155-157 Reserved
+158-159 Unused
+160-165 Reserved
+166-169 Unused
+170-171 Reserved
+172     CertBundle
+173-179 Unused
+180     Reserved
+181-199 Unused
+200-202 Reserved
+203-209 Unused
+210	    Reserved
+211	    Reserved
+212-216 Unused
+217-220 Reserved
+221-239 Unused
+240	    Reserved
+241	    MplStats
+242	    MplReset
+243-299 Unused
+301-303 Reserved
+304     Unused
+305-307 Reserved
+308-309 Unused
+310-312 Reserved
+313	    RPLStats
+314	    DHCP6Stats
+315     Reserved
+316     Reserved
+317-324 Unused
+325-337 Reserved
+338-339 Unused
+340-399 Reserved
+400-499 Unused
+500	    Reserved
+501	    Reserved
+502	    Reserved
+503-509 Unused
+510	    Reserved
+511     Reserved
+512-519 Unused
+520	    Reserved
+521	    Reserved
+522-529 Unused
+530     Reserved
+531     Reserved
+532-539 Unused
+540	    Reserved
+541-599 Unused
+600-607 Reserved
+608 ... Unused
+
+*/
+
+/*
+Message definitions follow.
+
+Tag notation used within ...
+
+Class:: designates class of device for which the TLV is relevant. 
+    Generic (any IP addressable device) 
+    Mesh (Wi-SUN mesh devices)
+    Others TBD.
+*/
+
+package csmp.tlvs;
+option java_package = "com.cisco.cgms.protocols.csmp.tlvs";
+
+// TLV 1
+// A list of zero or more TLV IDs
+// Class:: Generic
+//
+
+message TlvIndex {
+  repeated string tlvid = 1;    // list of TLV IDs (string encoded) supported by the device.
+}
+
+// TLV 2
+// Primary identifier for a specific device.
+// Class:: Generic
+//
+
+message DeviceID {
+  oneof type_present {
+    uint32 type = 1; // Set to 1 to indicate EUI-64 format.
+  }
+  oneof id_present {
+    string id = 2; // The unique identifier of the device in EUI-64 format
+  }
+}
+
+// TLV 6
+// Used by NMS to force a device to intitiate registration to a specific NMS.
+// Class:: Generic
+//
+
+message NMSRedirectRequest {
+  oneof url_present {
+    string url = 1; // NMS <base-url> to which the device registration will be directed.  MUST be formatted per section 6 of RFC 7252.
+  }
+  oneof immediate_present {
+    bool immediate = 2;  // True == device should immediately send registration request to the specificed NMS url.
+  }
+}
+
+// TLV 7
+// Session ID used by NMS to track device CSMP messaging.
+// Assigned by the NMS, and used in all subsequent Device to NMS messaging.
+// Class:: Generic
+//
+
+message SessionID {
+  oneof id_present {
+    string id = 1; // session ID
+  }
+}
+
+// TLV 8
+// List of zero or more TLVs requested by the NMS from a Device.
+// The values of the requested TLVs will be sent to the NMS asynchronously.
+// Class:: Generic
+//
+
+message DescriptionRequest {
+  repeated string tlvid = 1;    // list of TLV IDs in string format.
+}
+
+// A list of hardware modules with their firmware versions.
+//
+message HardwareModule {
+  oneof moduleType_present {
+    uint32 moduleType = 1; // hardware module type. Rf Dsp=1, PLC Dsp=2, CPU=3, FPGA=4
+  }
+  oneof firmwareRev_present {
+    string firmwareRev = 2; // firmware version of the hardware module
+  }
+}
+
+// TLV 11
+// This TLV contains hardware description information for the device.
+// The contents of the fields are defined by the equivalently-named fields in the entry of the SNMP MIB object entPhysicalTable.
+// Class:: Generic
+//
+
+message HardwareDesc {
+  oneof entPhysicalIndex_present {
+    int32 entPhysicalIndex = 1; // index of this hardware being described
+  }
+  oneof entPhysicalDescr_present {
+    string entPhysicalDescr = 2; // A textual description of physical entity
+  }
+  oneof entPhysicalVendorType_present {
+    bytes entPhysicalVendorType = 3; // An indication of the vendor-specific hardware type of the physical entity
+  }
+  oneof entPhysicalContainedIn_present {
+    int32 entPhysicalContainedIn = 4;  // The value of entPhysicalIndex for the physical entity which 'contains' this physical entity
+  }
+  oneof entPhysicalClass_present {
+    int32 entPhysicalClass = 5; // An indication of the general hardware type of the physical entity
+  }
+  oneof entPhysicalParentRelPos_present {
+    int32 entPhysicalParentRelPos = 6; // An indication of the relative position of this 'child' component among all its 'sibling' components
+  }
+  oneof entPhysicalName_present {
+    string entPhysicalName = 7; // The textual name of the physical entity
+  }
+  oneof entPhysicalHardwareRev_present {
+    string entPhysicalHardwareRev = 8; // The vendor-specific hardware revision string for the physical entity
+  }
+  oneof entPhysicalFirmwareRev_present {
+    string entPhysicalFirmwareRev = 9; // The vendor-specific firmware revision string for the physical entity
+  }
+  oneof entPhysicalSoftwareRev_present {
+    string entPhysicalSoftwareRev = 10; // The vendor-specific software revision string for the physical entity
+  }
+  oneof entPhysicalSerialNum_present {
+    string entPhysicalSerialNum = 11; // The vendor-specific serial number string for the physical entity
+  }
+  oneof entPhysicalMfgName_present {
+    string entPhysicalMfgName = 12; // The name of the manufacturer of this physical component
+  }
+  oneof entPhysicalModelName_present {
+    string entPhysicalModelName = 13; // The vendor-specific model name identifier string associated with this physical component
+  }
+  oneof entPhysicalAssetID_present {
+    string entPhysicalAssetID = 14; // This object is a user-assigned asset tracking identifier for the physical entity and provides non-volatile storage of this information
+  }
+  oneof entPhysicalMfgDate_present {
+    uint32 entPhysicalMfgDate = 15; // This object contains the date of manufacturing of the managed entity
+  }
+  oneof entPhysicalURIs_present {
+    string entPhysicalURIs = 16; // This object contains additional identification information about the physical entity
+  }
+  oneof entPhysicalFunction_present {
+    uint32 entPhysicalFunction = 17; // The �entPhysicalFunction� field can take the following values: METER = 1, RANGE_EXTENDER = 2, DA_GATEWAY = 3, CGE = 4, ROOT = 5, CONTROLLER = 6, SENSOR. = 7, NETWORKNODE = 8
+  }
+  oneof entPhysicalOUI_present {
+    bytes entPhysicalOUI = 18; // uniquely identifies a vendor
+  }
+  repeated HardwareModule hwModule = 19; // This defines a list of hardware modules with their firmware versions
+}
+
+// TLV 12
+// This TLV contains description information for an interface on the device.
+// The contents of these fields are defined by the equivalently-named fields in the SNMP MIB object ifTable
+// Class:: Generic
+//
+
+message InterfaceDesc {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // A unique value, greater than zero, for each interface
+  }
+  oneof ifName_present {
+    string ifName = 2; // The textual name of the interface
+  }
+  oneof ifDescr_present {
+    string ifDescr = 3; // A textual string containing information about the interface
+  }
+  oneof ifType_present {
+    int32 ifType = 4; // The type of interface
+  }
+  oneof ifMtu_present {
+    int32 ifMtu = 5; // The size of the largest packet which can be sent/received on the interface, specified in octets
+  }
+  oneof ifPhysAddress_present {
+    bytes ifPhysAddress = 6; // The interface's address at its protocol sub-layer
+  }
+}
+
+// TLV 13
+// This TLV specifies the periodic reporting of a set of TLVs.
+// Class:: Generic
+//
+
+message ReportSubscribe {
+  oneof interval_present {
+    uint32 interval = 1; // The periodic time interval (in seconds) at which the device sends the tlvid set of tlvs.
+  }
+  repeated string tlvid = 2; // The tlvs to be sent on the interval.
+  oneof intervalHeartBeat_present {
+    uint32 intervalHeartBeat = 3; // The periodic time interval at which the device sends the tlvidHeartBeat set of tlvs.
+  }
+  repeated string tlvidHeartBeat = 4; // The tlvs to be sent on the heartbeat interval.
+}
+
+// TLV 16
+// Describes a particular IP address (identified by the index) attached to an interface.
+// Class:: Generic
+//
+
+message IPAddress {
+  oneof ipAddressIndex_present {
+    int32 ipAddressIndex = 1; // A unique value, greater than zero, for each IP address
+  }
+  oneof ipAddressAddrType_present {
+    uint32 ipAddressAddrType = 2; // Address type defined as integers : ipv4=1, ipvv6=2, ipv4z=3, ipv6z=4, ipv6am=5
+  }
+  oneof ipAddressAddr_present {
+    bytes ipAddressAddr = 3; // The IP address
+  }
+  oneof ipAddressIfIndex_present {
+    int32 ipAddressIfIndex = 4; // Index of the associated interface
+  }
+  oneof ipAddressType_present {
+    uint32 ipAddressType = 5; // IP type defined as integers : unicast=1, anycast=2, broadcast=3
+  }
+  oneof ipAddressOrigin_present {
+    uint32 ipAddressOrigin = 6; // Address origin defined as integers : other=1, manual=2, dhcp=4, linklayer=5, random=6
+  }
+  oneof ipAddressStatus_present {
+    uint32 ipAddressStatus = 7; // status defined as integers : preferred=1, deprecated=2, invalid=3, inaccessible=4, unknown=5, tentative=6, duplicate=7, optimistic=8
+  }
+  reserved 8;  // oneof ipAddressCreated
+  reserved 9;  // oneof ipAddressLastChanged
+  oneof ipAddressPfxLen_present {
+    uint32 ipAddressPfxLen = 10; // The prefix length associated with the IP address.
+  }
+}
+
+// TLV 17
+// Describes a particular IP route (identified by the index) attached to an interface.
+// Class:: Generic
+//
+
+message IPRoute {
+  oneof inetCidrRouteIndex_present {
+    int32 inetCidrRouteIndex = 1; // A unique value, greater than zero, for each route
+  }
+  oneof inetCidrRouteDestType_present {
+    uint32 inetCidrRouteDestType = 2; // Destination Addresss type defined as integers : ipv4=1, ipvv6=2, ipv4z=3, ipv6z=4, ipv6am=5
+  }
+  oneof inetCidrRouteDest_present {
+    bytes inetCidrRouteDest = 3; // IP address of the destination of the route
+  }
+  oneof inetCidrRoutePfxLen_present {
+    uint32 inetCidrRoutePfxLen = 4; // Associated prefix length of the route destination
+  }
+  oneof inetCidrRouteNextHopType_present {
+    uint32 inetCidrRouteNextHopType = 5; // Next hop Addresss type defined as integers : ipv4=1, ipvv6=2, ipv4z=3, ipv6z=4, ipv6am=5
+  }
+  oneof inetCidrRouteNextHop_present {
+    bytes inetCidrRouteNextHop = 6; // IP address of the next hop of the route (device parent).  
+  }
+  oneof inetCidrRouteIfIndex_present {
+    int32 inetCidrRouteIfIndex = 7; // Index of the associated interface
+  }
+  reserved 8;  // oneof inetCidrRouteType
+  reserved 9;  // oneof inetCidrRouteProto
+  reserved 10;  // oneof inetCidrRouteAge
+}
+
+// TLV 18
+// Contains the current time as maintainced on the device.
+// For time stamping purposes, this tlvid MUST also be sent along with every periodic metric report.
+// It MAY contain a POSIX timestamp or an ISO 8601 timestamp.
+// Class:: Generic
+//
+
+message CurrentTime {
+  oneof posix_present {
+    uint32 posix = 1; // posix timestamp
+  }
+  oneof iso8601_present {
+    string iso8601 = 2; // iso 8601 timestamp
+  }
+  oneof source_present {
+    uint32 source = 3; // time service from. 1: local; 2: admin; 3: network
+  }
+}
+
+// TLV 21
+// For retrieving the RPL Settings on the device.
+// Class:: Mesh
+//
+
+message RPLSettings {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // interface id
+  }
+  oneof enabled_present {
+    bool enabled = 2; // whether RPL feature is enabled
+  }
+  oneof dioIntervalMin_present {
+    uint32 dioIntervalMin = 3; // min interval of DIO trickle timer in milliseconds
+  }
+  oneof dioIntervalMax_present {
+    uint32 dioIntervalMax = 4; // max interval of DIO trickle timer in milliseconds
+  }
+  oneof daoIntervalMin_present {
+    uint32 daoIntervalMin = 5; // min interval of DAO trickle timer in milliseconds
+  }
+  oneof daoIntervalMax_present {
+    uint32 daoIntervalMax = 6; // max interval of DAO trickle timer in milliseconds
+  }
+  oneof mopType_present {
+    uint32 mopType = 7; // mode of operation for RPL. 1: non-storing mode; 2: storing mode
+  }
+}
+
+// TLV 22
+// Contains the total system uptime of the device (seconds).
+// Class:: Generic
+//
+
+message Uptime {
+  oneof sysUpTime_present {
+    uint32 sysUpTime = 1; // uptime info in seconds
+  }
+}
+
+// TLV 23
+// The statistics of an interface
+// Class:: Generic
+//
+
+message InterfaceMetrics {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // A unique value, greater than zero, for each interface. Is same as in InterfaceDesc�s ifIndex for the same interface
+  }
+  oneof ifInSpeed_present {
+    uint32 ifInSpeed = 2; // The speed at which the incoming packets are received on the interface
+  }
+  oneof ifOutSpeed_present {
+    uint32 ifOutSpeed = 3; // The speed at which the outgoing packets are transmitted on the interface
+  }
+  oneof ifAdminStatus_present {
+    uint32 ifAdminStatus = 4; // The desired state of the interface
+  }
+  oneof ifOperStatus_present {
+    uint32 ifOperStatus = 5; // The current operational state of the interface
+  }
+  oneof ifLastChange_present {
+    uint32 ifLastChange = 6; // The value of sysUpTime at the time the interface entered its current operational state
+  }
+  oneof ifInOctets_present {
+    uint32 ifInOctets = 7; // The total number of octets received on the interface, including framing characters
+  }
+  oneof ifOutOctets_present {
+    uint32 ifOutOctets = 8; // The total number of octets transmitted out of the interface, including framing characters
+  }
+  oneof ifInDiscards_present {
+    uint32 ifInDiscards = 9; // The number of inbound packets which were chosen to be discarded even though no errors had been detected to prevent their being deliverable to a higher-layer protocol (application dependant).
+  }
+  oneof ifInErrors_present {
+    uint32 ifInErrors = 10; // For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol (subset of ifInDiscards).
+  }
+  oneof ifOutDiscards_present {
+    uint32 ifOutDiscards = 11; // The number of outbound packets which were chosen to be discarded even though no errors had been detected to prevent their being transmitted
+  }
+  oneof ifOutErrors_present {
+    uint32 ifOutErrors = 12; // For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors
+  }
+}
+
+// TLV 25
+// Describes status of each RPL router
+// Class:: Mesh
+//
+
+message IPRouteRPLMetrics {
+  oneof inetCidrRouteIndex_present {
+    int32 inetCidrRouteIndex = 1; // refers to a particular index in the IPRoute table
+  }
+  oneof instanceIndex_present {
+    int32 instanceIndex = 2; // Corresponding RPL instance of this route
+  }
+  oneof rank_present {
+    int32 rank = 3; // advertised rank
+  }
+  oneof hops_present {
+    int32 hops = 4; // not necessary now, but here so we can easily add later once we're propagating hops as a metric
+  }
+  oneof pathEtx_present {
+    int32 pathEtx = 5;  // advertised path ethx
+  }
+  oneof linkEtx_present {
+    int32 linkEtx = 6;  // next-hop link ETX
+  }
+  oneof rssiForward_present {
+    sint32 rssiForward = 7; // forward RSSI value (relative to the device)
+  }
+  oneof rssiReverse_present {
+    sint32 rssiReverse = 8; // reverse RSSI value (relative to the device)
+  }
+  oneof lqiForward_present {
+    int32 lqiForward = 9; // forward LQI value
+  }
+  oneof lqiReverse_present {
+    int32 lqiReverse = 10; // reverse LQI value
+  }
+  oneof dagSize_present {
+    uint32 dagSize = 11; // nodes count of this pan (number of joined devices)
+  }
+  reserved 12 to 17; // Used by Itron.
+  PhyModeInfo phyModeForward = 18; // forward phy mode value
+  PhyModeInfo phyModeReverse = 19; // reverse phy mode value
+}
+
+// TLV 30
+// Requesting the device to perform a ping operation to a destination address.
+// Class:: Generic
+//
+
+message PingRequest {
+  oneof dest_present {
+    string dest = 1; // IP address to be pinged from the device.
+  }
+  oneof count_present {
+    uint32 count = 2; // number of times to ping.
+  }
+  oneof delay_present {
+    uint32 delay = 3; // delay between ping in seconds.
+  }
+}
+
+// TLV 31
+// Acquire the current status of the last PingRequest.
+// Class:: Generic
+//
+
+message PingResponse {
+  oneof sent_present {
+    uint32 sent = 1;  // number of packets sent
+  }
+  oneof received_present {
+    uint32 received = 2; // number of packets received
+  }
+  oneof minRtt_present {
+    uint32 minRtt = 3; // min round trip time
+  }
+  oneof meanRtt_present {
+    uint32 meanRtt = 4; // mean round trip time
+  }
+  oneof maxRtt_present {
+    uint32 maxRtt = 5; // max round trip time
+  }
+  oneof stdevRtt_present {
+    uint32 stdevRtt = 6; // standard deviation of the round trip time
+  }
+  oneof src_present {
+    string src = 7; // source IP address for the ping
+  }
+}
+
+// TLV 32
+// Request a device to reboot.
+// Class:: Generic
+//
+
+message RebootRequest {
+  oneof flag_present {
+    uint32 flag = 1; // 0 : reboot and transfer to designated running image; 1 : reboot and stop at bootloader CLI.
+  }
+}
+
+// TLV 33
+// 802.1x status
+// Class:: Mesh
+//
+
+message Ieee8021xStatus {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // It is RECOMMENDED this be set to 2 for the 6LowPAN interface.
+  }
+  oneof enabled_present {
+    bool enabled = 2; // 802.1x enabled or not?
+  }
+  oneof identity_present {
+    string identity = 3; // subject name of certificate, max len 32
+  }
+  oneof state_present {
+    uint32 state = 4; // state of tls handshake
+  }
+  oneof pmKId_present {
+    bytes pmkId = 5; // hash value of pmk, len 16
+  }
+  oneof clientCertValid_present {
+    bool clientCertValid = 6; // whether client cert is valid
+  }
+  oneof caCertValid_present {
+    bool caCertValid = 7; // whether ca cert is valid
+  }
+  oneof privateKeyValid_present {
+    bool privateKeyValid = 8; // whether private key of client cert is valid
+  }
+  oneof rlyPanid_present {
+    uint32 rlyPanid = 9; // panid of relay node
+  }
+  oneof rlyAddress_present {
+    bytes rlyAddress = 10; // eui64 address of relay node, len 8
+  }
+  oneof rlyLastHeard_present {
+    uint32 rlyLastHeard = 11; // last heard from relay node in seconds
+  }
+}
+
+// TLV 34
+// 802.11i status
+// Class:: Mesh
+//
+
+message Ieee80211iStatus {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // It is RECOMMENDED this be set to 2 for the 6LowPAN interface.
+  }
+  oneof enabled_present {
+    bool enabled = 2; // 802.11i is eabled or not
+  }
+  oneof pmkId_present {
+    bytes pmkId = 3; // hash value of pmk, len 16
+  }
+  oneof ptkId_present {
+    bytes ptkId = 4; // hash value of ptk, len 16
+  }
+  oneof gtkIndex_present {
+    int32 gtkIndex = 5; // index of gtk
+  }
+  oneof gtkAllFresh_present {
+    bool gtkAllFresh = 6; // whether all gtk are fresh
+  }
+  repeated bytes gtkList = 7; // list of hash value for each gtk, hash len 8, max repeat 4
+  repeated uint32 gtkLifetimes = 8; // list of lifetime for each gtk, hash len 8, max repeat 4
+  oneof authAddress_present {
+    bytes authAddress = 9; // eui64 address of authenticate node
+  }
+}
+
+message PhyModeInfo {
+  oneof phyMode_present {
+    uint32 phyMode = 1; // phy operating mode value (as defined in section 5.2 of PHYWG Wi-SUN PHY Technical Specification - Amendment 1VA8)
+  }
+  oneof txPower_present {
+   int32 txPower = 2; // transmit power value in dbm.
+  }
+}
+
+// TLV 35
+// Configuration of WPAN-specific interface settings
+// Class:: Mesh
+//
+//
+
+message WPANStatus {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // It is RECOMMENDED this be set to 2 for the 6LowPAN interface.
+  }
+  oneof SSID_present {
+    bytes SSID = 2; // max len 32 (Wi-SUN NetName).
+  }
+  oneof panid_present {
+    uint32 panid = 3;
+  }
+  reserved 4;
+
+  oneof dot1xEnabled_present {
+    bool dot1xEnabled = 5; // Is dot1x enabled?
+  }
+  oneof securityLevel_present {
+    uint32 securityLevel = 6; // security level
+  }
+  oneof rank_present {
+    uint32 rank = 7;
+  }
+  oneof beaconValid_present {
+    bool beaconValid = 8; // Is beacon valid (where invalid means receipt has timed-out/contact with PAN was lost)?  (PC frame for Wi-SUN)
+  }  
+  oneof beaconVersion_present {
+    uint32 beaconVersion = 9; // beacon version (Wi-SUN PAN version).
+  }
+  oneof beaconAge_present {
+    uint32 beaconAge = 10; // last heard beacon message in seconds  (PC frame for Wi-SUN).
+  }
+  oneof txPower_present {
+    int32 txPower = 11; // transmit power value in dbm
+  }
+  oneof dagSize_present {
+    uint32 dagSize = 12; // count of nodes joined to this PAN
+  }
+  oneof metric_present {
+    uint32 metric = 13; // metric to border router (Wi-SUN Routing Cost)
+  }
+  oneof lastChanged_present {
+    uint32 lastChanged = 14; // seconds since last PAN change (PAN ID change).
+  }
+  oneof lastChangedReason_present {
+    uint32 lastChangedReason = 15; // reason for last PAN change: -1 == unknown, 0 == mesh initializing, 1 ==  mesh connectivity lost, 2 == GTK timeout,  3 == default route lost, 4 == migrated to better PAN, 5 == reserved.
+  }
+  oneof demoModeEnabled_present {
+    bool demoModeEnabled = 16; // Is demo mode enabled?
+  }
+  oneof txFec_present {
+    bool txFec = 17; // Is FEC enabled?
+  }
+  oneof phyMode_present {
+    uint32 phyMode = 18; // phy operating mode value (as defined in section 5.2 of PHYWG Wi-SUN PHY Technical Specification - Amendment 1VA8)
+  }
+  reserved 19;
+  repeated PhyModeInfo phyModeList = 20; // multi phy mode and transmit power value for adaptive modulation
+}
+
+// TLV 36
+// Status of DHCP6 client
+// Class:: Generic
+//
+
+message DHCP6ClientStatus {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // It is RECOMMENDED this be set to 2 for the 6LowPAN interface.
+  }
+  oneof ianaIAID_present {
+    uint32 ianaIAID = 2; // TA ID value
+  }
+  oneof ianaT1_present {
+    uint32 ianaT1 = 3; // T1 value
+  }
+  oneof ianaT2_present {
+    uint32 ianaT2 = 4; // T2 value
+  }
+}
+
+// TLV 42
+// Configure device reporting settings.
+// Class:: Generic
+//
+
+message NMSSettings {
+  oneof regIntervalMin_present {
+    uint32 regIntervalMin = 1; // min interval of register trickle timer in seconds
+  }
+  oneof regIntervalMax_present {
+    uint32 regIntervalMax = 2; // max interval of register trickle timer in seconds
+  }
+  // reserved = 3;
+  // reserved = 4;
+  // reserved = 5;
+  // reserved = 6;
+}
+
+// TLV 43
+// Registration status to NMS.
+// NMS uses this TLV to record the reason for the registration operation as recorded in the lastRegReason field of the TLV.
+// Class:: Generic
+//
+
+message NMSStatus {
+  oneof registered_present {
+    bool registered = 1; // True of device is registerd with NMS
+  }
+  oneof NMSAddr_present {
+    bytes NMSAddr = 2; // IPv6 address of NMS
+  }
+  oneof NMSAddrOrigin_present {
+    uint32 NMSAddrOrigin = 3;   // Mechanims used to get NMS's IPv6 address (fixed/DHCPv6/redirect by TLV6 ... values).
+  }
+  oneof lastReg_present {
+    uint32 lastReg = 4; // time since last succesful registration in seconds
+  }
+  oneof lastRegReason_present {
+    uint32 lastRegReason = 5; // reason for last registration. 1: coldstart 2: administrative 3: IP address changed 4: NMS changed 5: NMS redirect 6: NMS error 7: IDevID, LDevID, or NMS certificate changed 8: outage recovery.
+  }
+  oneof nextReg_present {
+    uint32 nextReg = 6; // time to next registration attempt in seconds.
+  }
+  oneof NMSCertValid_present {
+    bool NMSCertValid = 7; // True if NMS certificate is valid.
+  }
+}
+
+// TLV 47
+// Device settings for 802.1x
+// Class:: Mesh
+//
+
+message Ieee8021xSettings {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // It is RECOMMENDED this be set to 2 for the 6LowPAN interface.
+  }
+  oneof secMode_present {
+    uint32 secMode = 2; // security mode, non-security or security (Security Level from Aux Security Header of IEEE 802.15.4-2020)
+  }
+  oneof authIntervalMin_present {
+    uint32 authIntervalMin = 3; // min interval of 802.1x trickle timer in seconds
+  }
+  oneof authIntervalMax_present {
+    uint32 authIntervalMax = 4; // max interval of 802.1x trickle timer in seconds
+  }
+  oneof immediate_present {
+    bool immediate = 5; // True == do 802.1x authentication immediately,  False == do 802.1x authentication at next authentication interval.
+  }
+}
+
+// TLV 48
+// Statistic of 802.15.4 beacon packets
+// Class:: Mesh
+//
+
+message Ieee802154BeaconStats {
+  oneof ifIndex_present {
+    int32 ifIndex = 1; // It is RECOMMENDED this be set to 2 for the 6LowPAN interface.
+  }
+  oneof inFrames_present {
+    uint32 inFrames = 10; // count for all received beacon
+  }
+  oneof inFramesBeaconPAS_present {
+    uint32 inFramesBeaconPAS = 11; // count for received PAS beacon
+  }
+  oneof inFramesBeaconPA_present {
+    uint32 inFramesBeaconPA = 12; // count for received PA beacon
+  }
+  oneof inFramesBeaconPCS_present {
+    uint32 inFramesBeaconPCS = 13; // count for received PCS beacon
+  }
+  oneof inFramesBeaconPC_present {
+    uint32 inFramesBeaconPC = 14; // count for received PC beacon
+  }
+  oneof outFrames_present {
+    uint32 outFrames = 20; // count for all sent out beacon
+  }
+  oneof outFramesBeaconPAS_present {
+    uint32 outFramesBeaconPAS = 21; // count for sent out PAS beacon
+  }
+  oneof outFramesBeaconPA_present {
+    uint32 outFramesBeaconPA = 22; // count for sent out PA beacon
+  }
+  oneof outFramesBeaconPCS_present {
+    uint32 outFramesBeaconPCS = 23; // count for sent out PCS beacon
+  }
+  oneof outFramesBeaconPC_present {
+    uint32 outFramesBeaconPC = 24; // count for sent out PC beacon
+  }
+}
+
+// TLV 53
+// Indicates RPL instance information
+// Class:: Mesh
+//
+
+message RPLInstance {
+  oneof instanceIndex_present {
+    int32 instanceIndex = 1; // index for instance
+  }
+  oneof instanceId_present {
+    int32 instanceId = 2; // instance id
+  }
+  oneof doDagId_present {
+    bytes doDagId = 3; // dodag id, len 16
+  }
+  oneof doDagVersionNumber_present {
+    int32 doDagVersionNumber = 4; // dodag version number of instance
+  }
+  oneof rank_present {
+    int32 rank = 5; // rank value
+  }
+  oneof parentCount_present {
+    int32 parentCount = 6; // Count of available parents (Wi-SUN candidate parent set).
+  }
+  oneof dagSize_present {
+    uint32 dagSize = 7; // nodes count of this dodag
+  }
+  repeated RPLParent parents = 8;     // max repeat 3
+  repeated RPLParent candidates = 9;  // max repeat 3
+}
+
+message RPLParent {
+  oneof parentIndex_present {
+    int32 parentIndex = 1; // this parent's index in the RPLParent table
+  }
+  oneof instanceIndex_present {
+    int32 instanceIndex = 2; // a particular index in the RPLInstance table that this parent underlies.
+  }
+  oneof routeIndex_present {
+    int32 routeIndex = 3; // a particular index in the IPRoute table that this parent underlies
+  }
+  oneof ipv6AddressLocal_present {
+    bytes ipv6AddressLocal = 4; // IPv6 linklocal address
+  }
+  oneof ipv6AddressGlobal_present {
+    bytes ipv6AddressGlobal = 5; // IPv6 global address
+  }
+  oneof doDagVersionNumber_present {
+    uint32 doDagVersionNumber = 6; // dodag version number if RPL parent
+  }
+  oneof pathEtx_present {
+    int32 pathEtx = 7;  // the parent's ETX back to the root.
+  }
+  oneof linkEtx_present {
+    int32 linkEtx = 8;  // the node's ETX to its next-hop
+  }
+  oneof rssiForward_present {
+    sint32 rssiForward = 9; // forward RSSI value
+  }
+  oneof rssiReverse_present {
+    sint32 rssiReverse = 10; // reverse RSSI value
+  }
+  oneof lqiForward_present {
+    int32 lqiForward = 11; // forward LQI value
+  }
+  oneof lqiReverse_present {
+    int32 lqiReverse = 12; // reverse LQI value
+  }
+  oneof hops_present {
+    int32 hops = 13; // parent's hop value
+  }
+}
+
+
+// Groups in CSMP provide a mechanism to realize application layer multicast in the network.
+// A group is uniquely defined by a type, id pair. Membership within a group type is exclusive,
+// i.e., a device can be a member of only one group-id within a group-type.
+// However, a device can be a member of more than one group of different group-types.
+
+// A device is informed about its membership to a group using a GroupAssign TLV.
+// On their very first boot, devices do not belong to any group. A device is added to a group by sending a GroupAssign TLV to the device.
+// Receipt of a GroupAssign TLV replaces any existing group assignments.
+// GroupAssign may occur either by direct unicast to a device or in the registration response from the NSM to the device.
+// Note that a GroupAssign should not be sent over a multicast, because it would possibly cause some group members to change and some group members not to change.
+
+// Group membership information MUST be stored in persistent storage so that once a device has been assigned any group it is remembered across reboots.
+// A device will only process multicast messages containing a GroupMatch TLV if the device belongs to a group specified by the GroupMatch TLV.
+
+// TLV 55
+// Class:: Generic
+//
+
+message GroupAssign {
+  oneof type_present {
+    uint32 type = 1;
+  }
+  oneof id_present {
+    uint32 id = 2;
+  }
+}
+
+// TLV 57
+// Class:: Generic
+//
+
+message GroupMatch {
+  oneof type_present {
+    uint32 type = 1;
+  }
+  oneof id_present {
+    uint32 id = 2;
+  }
+}
+
+// TLV 58
+// Class:: Generic
+// GET to a device for this TLV MAY illicit a response with one or more GroupInfo TLVs. 
+//
+
+message GroupInfo {
+  oneof type_present {
+    uint32 type = 1;
+  }
+  oneof id_present {
+    uint32 id = 2;
+  }
+}
+
+message LowpanMacCounters {
+  oneof inFrames_present {
+    uint32 inFrames = 1; // count for all received frames
+  }
+  oneof inFramesBeacon_present {
+    uint32 inFramesBeacon = 2; // count for received beacon frames (Note: Wi-SUN does not use Beacon frames).
+  }
+  oneof inFramesData_present {
+    uint32 inFramesData = 3; // count for received data frames
+  }
+  oneof inFramesAck_present {
+    uint32 inFramesAck = 4; // count for received ack frames
+  }
+  oneof inFramesCmd_present {
+    uint32 inFramesCmd = 5; // count for received command frames
+  }
+  oneof inFramesAsync_present {
+    uint32 inFramesAsync = 6; // count for received async frames
+  }
+  oneof inFramesBcast_present {
+    uint32 inFramesBcast = 7; // count for received broadcast frames
+  }
+  oneof inFramesUcast_present {
+    uint32 inFramesUcast = 8; // count for received unicast frames
+  }
+  oneof outFrames_present {
+    uint32 outFrames = 9; // count for all sent out frames
+  }
+  oneof outFramesBeacon_present {
+    uint32 outFramesBeacon = 10; // count for sent out beacon frames
+  }
+  oneof outFramesData_present {
+    uint32 outFramesData = 11; // count for sent out data frames
+  }
+  oneof outFramesAck_present {
+    uint32 outFramesAck = 12; // count for sent out ack frames
+  }
+  oneof outFramesCmd_present {
+    uint32 outFramesCmd = 13; // count for sent out command frames
+  }
+  oneof outFramesAsync_present {
+    uint32 outFramesAsync = 14; // count for sent out async frames
+  }
+  oneof outFramesBcast_present {
+    uint32 outFramesBcast = 15; // count for recesent outived broadcast frames
+  }
+  oneof outFramesUcast_present {
+    uint32 outFramesUcast = 16; // count for sent out unicast frames
+  }
+}
+
+// TLV 62
+// Statistic of lowpan mac layer
+// Class:: Mesh
+//
+
+message LowpanMacStats {
+  LowpanMacCounters total = 1;  // total counter for lowpan mac layer
+  LowpanMacCounters rf = 2;     // rf counter for lowpan mac layer
+  reserved 3;                   // optional LowpanMacCounters plc = 3;
+}
+
+// TLV 63
+// Configuration of RF PHY
+// Class:: Mesh
+//
+
+message LowpanPhySettings {
+  oneof lowpanRF_present {
+    uint32 lowpanRF = 1; // 1 == enable lowpan rf, 0 == disable.
+  }
+  reserved 2;   // optional uint32 lowpanPLC = 2;
+}
+
+// TLV 65 - 75 are for firmware upgrade, detailed in CSMP specification.
+//
+message HardwareInfo {
+  oneof hwId_present {
+    string hwId = 1; // hardware information, max len 32
+  }
+  oneof vendorHwId_present {
+    string vendorHwId = 2; // sub hardware information, max len 32
+  }
+}
+
+// TLV 65
+// Start to transfer firmware
+// Class:: Generic
+//
+
+message TransferRequest {
+  HardwareInfo hwInfo = 1; // hardware information
+  oneof fileHash_present {
+    bytes fileHash = 2; // SHA256 hash value of image file, len 32
+  }
+  oneof fileName_present {
+    string fileName = 3; // name of image file, max len 128
+  }
+  oneof version_present {
+    string version = 4; // version number, man len 32
+  }
+  oneof fileSize_present {
+    uint32 fileSize = 5; // total size of image file
+  }
+  oneof blockSize_present {
+    uint32 blockSize = 6; // block size of image file
+  }
+  // reserved = 7;
+  // reserved = 8;
+  // reserved = 9;
+  // reserved = 10;
+  // reserved = 11;
+}
+
+// TLV 67
+// Class:: Generic
+//
+
+message ImageBlock {
+  oneof fileHash_present{
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+  oneof blockNum_present {
+    uint32 blockNum = 2; // block number 0, 1, 2, etc.
+  }
+  oneof blockData_present {
+    bytes  blockData = 4; // block context, max len 1024
+  }
+}
+
+// TLV 68
+// Firmware load request
+// Class:: Generic
+//
+
+message LoadRequest {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+  oneof loadTime_present {
+    uint32 loadTime = 2; // UTC time to load image, set to 1 to load immeditealy.
+  }
+}
+
+// TLV 69
+// Firmware cancel load request
+// Class:: Generic
+//
+
+message CancelLoadRequest {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+}
+
+// TLV 70
+// Set firmware to backup slot
+// Class:: Generic
+//
+
+message SetBackupRequest {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+}
+
+/* ResponseCodes
+
+enum {
+  OK = 0;                 // The request was successfully processed.
+  INCOMPATIBLE_HW = 1;    // Device hardware type does not match the request's hardware type.
+  IMAGE_INCOMPLETE = 2;   // Image operation cannot be completed, device only has partial image.
+  UNKNOWN_HASH = 3;       // File hash does not match any image available on the device.
+  FILE_SIZE_TOO_BIG = 4;  // Image download is denied, filesize of the new image is too large.
+  SIGNATURE_FAILED = 5;   // Image signature check failed.
+  INVALID_REQ = 6;        // Invalid request.
+  INVALID_BLOCK_SIZE = 7; // Invalid image block size.
+  PENDING_REBOOT = 8;     // Request cannot be processed, conflict with a pending device reboot.
+  IMAGE_RUNNING = 9;      // Cancel reboot request cannot be processed, image is already running.
+}
+*/
+
+// TLV 71
+// Response for TLV 65 TransferRequest
+// Class:: Generic
+//
+
+message TransferResponse {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+  oneof response_present {
+    uint32 response = 2; // refer to ResponseCodes
+  }
+}
+
+// TLV 72
+// Response for TLV 68 LoadRequest
+// Class:: Generic
+//
+
+message LoadResponse {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+  oneof response_present {
+    uint32 response = 2; // refer to ResponseCodes
+  }
+  oneof loadTime_present {
+    uint32 loadTime = 3; // UTC time to load image
+  }
+}
+
+// TLV 73
+// Response for TLV 69 CancelLoadRequest
+// Class:: Generic
+//
+
+message CancelLoadResponse {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+  oneof response_present {
+    uint32 response = 2; // refer to ResponseCodes
+  }
+}
+
+// TLV 74
+// Class:: Generic
+//
+
+message SetBackupResponse {
+  oneof fileHash_present {
+    bytes fileHash = 1; // SHA256 hash value of image file, len 32
+  }
+  oneof response_present {
+    uint32 response = 2; // refer to ResponseCodes
+  }
+}
+
+// TLV 75
+// Image information
+// Class:: Generic
+//
+
+message FirmwareImageInfo {
+  oneof index_present {
+    uint32 index = 1;
+  }
+  oneof fileHash_present {
+    bytes fileHash = 2; // SAH256 hash value of image file, len 32
+  }
+  oneof fileName_present {
+    string fileName = 3; // name of image file, max len 128
+  }
+  oneof version_present {
+    string version = 4; // version number, man len 32
+  }
+  oneof fileSize_present {
+    uint32 fileSize = 5; // total size of image file
+  }
+  oneof blockSize_present {
+    uint32 blockSize = 6; // block size of image file
+  }
+  oneof bitmap_present {
+    bytes bitmap = 7; // bitmap of image file, max len 128. Big endian. 1 means block was received, 0 means block was not received.
+  }
+  oneof isDefault_present {
+    bool isDefault = 8; // True if default image
+  }
+  oneof isRunning_present {
+    bool isRunning = 9; // True if running image
+  }
+  oneof loadTime_present {
+    uint32 loadTime = 10; // UTC time to load.  1 means load immediately.
+  }
+  HardwareInfo hwInfo = 11; // hardware information
+  oneof bitmapOffset_present {
+    uint32 bitmapOffset = 12; // When present, MUST be set to indicate the start block number of bitmap.  Block numbering is 0 based.
+  }
+  // reserved = 13;
+  // reserved = 14;
+  // reserved = 15;
+}
+
+// TLV 76
+// Class:: Generic
+//
+
+message SignatureValidity {
+  oneof notBefore_present {
+    uint32 notBefore = 1; // posix time
+  }
+  oneof notAfter_present {
+    uint32 notAfter = 2; // posix time
+  }
+}
+
+// TLV 77
+// Class:: Generic
+//
+
+message Signature {
+  oneof value_present {
+    bytes value = 1;
+  }
+}
+
+// TLV 79
+// Configuration of signature check settings about message from NMS
+// Class:: Generic
+//
+
+message SignatureSettings {
+  oneof reqSignedPost_present {
+    bool reqSignedPost = 1; // check signature in POST message from NMS?
+  }
+  oneof reqValidCheckPost_present {
+    bool reqValidCheckPost = 2; // time valid check in POST message from NMS?
+  }
+  oneof reqTimeSyncPost_present {
+    bool reqTimeSyncPost = 3; // return fail when node doesn't have global time in POST message from NMS?
+  }
+  oneof reqSecLocalPost_present {
+    bool reqSecLocalPost = 4; // check signature in POST message from console?
+  }
+  oneof reqSignedResp_present {
+    bool reqSignedResp = 5; // check signature in response message from NMS during registation?
+  }
+  oneof reqValidCheckResp_present {
+    bool reqValidCheckResp = 6; // time valid check in response message from NMS during registation?
+  }
+  oneof reqTimeSyncResp_present {
+    bool reqTimeSyncResp = 7; // return fail when node doesn't have global time in response message from NMS during registation?
+  }
+  oneof reqSecLocalResp_present {
+    bool reqSecLocalResp = 8; // check signature in response message from console during registation?
+  }
+  oneof cert_present {
+    bytes cert = 9; // cert context, used to change NMS's certificate, max len 512
+  }
+}
+
+message HardwareResetCount {
+  oneof total_present {
+    uint32 total = 1;
+  }
+  oneof externalReset_present {
+    uint32 externalReset = 2; // external reset reason.
+  }
+  oneof powerOnReset_present {
+    uint32 powerOnReset = 3; // power on reset reason.
+  }
+}
+
+message SoftwareResetCount {
+  oneof total_present {
+    uint32 total = 1;
+  }
+  oneof FWLoadReset_present {
+    uint32 FWLoadReset = 2; // firmware reload
+  }
+  oneof CSMPRebootReset_present {
+    uint32 CSMPRebootReset = 3; // reload by csmp TLV
+  }
+  oneof vendorProgramReset_present {
+    uint32 vendorProgramReset = 4; // reload by vendor's APP
+  }
+  oneof cfgLoadReset_present {
+    uint32 cfgLoadReset = 5; // reload config file
+  }
+}
+
+message ExceptionResetCount {
+  oneof total_present {
+    uint32 total = 1;
+  }
+  oneof IWDGReset_present {
+    uint32 IWDGReset = 2; // watchdog reset
+  }
+  oneof cstackOverflowReset_present {
+    uint32 cstackOverflowReset = 3; // stack over flow reset
+  }
+  oneof EPFReset_present {
+    uint32 EPFReset = 4; // GPIO reset
+  }
+}
+
+// TLV 86
+// Count of all types of reset in the system, include hardware reset, software reset and exception reset
+// Class:: Generic
+//
+
+message SysResetStats {
+  oneof total_present {
+    uint32 total = 1; // reset count
+  }
+  HardwareResetCount hardwareReset = 2;
+  SoftwareResetCount softwareReset = 3;
+  ExceptionResetCount exceptionReset = 4;
+}
+
+// TLV 124
+// Status of device network module, similar as netstat command in linux
+// Class:: Generic
+//
+
+message NetStat {
+  oneof sessionIndex_present {
+    int32 sessionIndex = 1;  // session index
+  }
+  oneof protocol_present {
+    uint32 protocol = 2; // 6 - TCP, 17 - UDP
+  }
+  oneof localAddress_present {
+    bytes localAddress = 3; // ipv4 or ipv6 local address
+  }
+  oneof localPort_present {
+    uint32 localPort = 4; // local port
+  }
+  oneof peerAddress_present {
+    bytes peerAddress = 5; // ipv4 or ipv6 peer address
+  }
+  oneof peerPort_present {
+    uint32 peerPort = 6; // peer port
+  }
+  oneof state_present {
+    uint32 state = 7;
+  }
+  oneof role_present {
+    uint32 role = 8; // 1 - server/incoming, 2 - client/outgoing
+  }
+}
+
+// TLV 141
+// Indicate the network role of device
+// Class:: Generic
+//
+
+message NetworkRole {
+  uint32 preference = 1; // 0 - SYSTEM_DEFAULT, 1 - TRANSIT_NODE, 2 - LEAF_NODE
+}
+
+message CertInfoEntry {
+  oneof type_present {
+    uint32 type = 1;   // 1: FND public key; 2: 802.1x CA; 3: 802.1x public key; 4: iDevID public key;
+  }
+  oneof certSubj_present {
+    string certSubj = 2;  // certificate subject name, max length 128
+  }
+  oneof certValidNotBefore_present {
+    string certValidNotBefore = 3;  // not before of valid time, max length 16
+  }
+  oneof certValidNotAfter_present {
+    string certValidNotAfter = 4;  // not after of valid time, max length 16
+  }
+  oneof certFingerprint_present {
+    bytes certFingerprint = 5;  // certificate finger print, max length 20
+  }
+}
+
+// TLV 172
+// Device Certificate Bundle TLV.
+//
+message CertBundle {
+  repeated CertInfoEntry certInfo = 1; // max repeat is 5
+}
+
+// TLV 241
+// Statistic of MPL packet
+// Class:: Mesh
+//
+
+message MplStats {
+  oneof dataSent_present {
+    uint32 dataSent = 1; // count for send out data packet
+  }
+  oneof dataReceived_present {
+    uint32 dataReceived = 2; // count for received data packet
+  }
+  oneof dataError_present {
+    uint32 dataError = 3; // count for error data packet
+  }
+  oneof dataSentDuplicate_present {
+    uint32 dataSentDuplicate = 4; // count for duplicate sent out data packet
+  }
+  oneof dataReceivedDuplicate_present {
+    uint32 dataReceivedDuplicate = 5; // count for duplicate received data packet
+  }
+  oneof controlSent_present {
+    uint32 controlSent = 6; // count for send out control packet
+  }
+  oneof controlReceived_present {
+    uint32 controlReceived = 7; // count for received control packet
+  }
+  oneof controlError_present {
+    uint32 controlError = 8; // count for error control packet
+  }
+}
+
+// TLV 242
+// Reset statistic of MPL packet
+// Class:: Mesh
+//
+
+message MplReset {
+  oneof stats_present {
+    bool stats = 8; // True == reset statistics of MPL packet
+  }
+}
+
+// TLV 313
+// Statistics for RPL messages
+// Class:: Mesh
+//
+
+message RPLStats {
+  oneof inFramesDIS_present {
+    uint32 inFramesDIS = 1; // count for received DIS packets
+  }
+  oneof inFramesDIO_present {
+    uint32 inFramesDIO = 2; // count for received DIO packets
+  }
+  oneof inFramesDAO_present {
+    uint32 inFramesDAO = 3; // count for received DAO packets
+  }
+  oneof outFramesDIS_present {
+    uint32 outFramesDIS = 4; // count for send out DIS packets
+  }
+  oneof outFramesDIO_present {
+    uint32 outFramesDIO = 5; // count for send out DIO packets
+  }
+  oneof outFramesDAO_present {
+    uint32 outFramesDAO = 6; // count for send out DAO packets
+  }
+  oneof outFramesNoPathDAO_present {
+    uint32 outFramesNoPathDAO = 7; // count for send out no-path DAO packets
+  }
+  oneof outFramesNS_present {
+    uint32 outFramesNS = 8; // count for send out neighbor solicit packets
+  }
+}
+
+// TLV 314
+// Statistics for DHCPv6 messages
+// Class:: Generic
+//
+
+message DHCP6Stats {
+  oneof clientFramesSolicit_present {
+    uint32 clientFramesSolicit = 1; // count for send out solicit packets
+  }
+  oneof clientFramesAdvertise_present {
+    uint32 clientFramesAdvertise = 2; // count for send out advertise packets
+  }
+  oneof clientFramesRequest_present {
+    uint32 clientFramesRequest = 3; // count for send out request packets
+  }
+  oneof clientFramesReply_present {
+    uint32 clientFramesReply = 4; // count for send out reply packets
+  }
+  oneof relayFramesForward_present {
+    uint32 relayFramesForward = 5; // count for DHCP relay packet which is forwarded by node
+  }
+  oneof relayFramesReply_present {
+    uint32 relayFramesReply = 6; // count for DHCP relay packet which is relaied by node
+  }
+}

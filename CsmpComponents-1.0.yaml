@@ -1,0 +1,351 @@
+# OpenAPI version identifier - required for OpenAPI 3.0 domains
+openapi: 3.0.0
+
+info:
+  title: CSMP Components
+  description: Common components for CSMP APIs
+  version: '1.0'
+
+components:
+  schemas:
+    TLVsGetAbleFromDevice:
+      description: |
+        TLVs which are GET-able from a <device-url>/c.
+        Metrics and settings. Note: full table access is permitted.
+      anyOf:
+      - $ref: '#/components/schemas/TlvIndex'
+      - $ref: '#/components/schemas/HardwareDesc'
+      - $ref: '#/components/schemas/InterfaceDesc'  
+      - $ref: '#/components/schemas/ReportSubscribe'
+      - $ref: '#/components/schemas/IPAddress'
+      - $ref: '#/components/schemas/IPRoute'
+      - $ref: '#/components/schemas/CurrentTime'
+      - $ref: '#/components/schemas/RPLSettings' 
+      - $ref: '#/components/schemas/Uptime'
+      - $ref: '#/components/schemas/InterfaceMetrics'
+      - $ref: '#/components/schemas/IPRouteRPLMetrics'  
+      - $ref: '#/components/schemas/Ieee8021xStatus'
+      - $ref: '#/components/schemas/Ieee80211iStatus'  
+      - $ref: '#/components/schemas/WPANStatus'
+      - $ref: '#/components/schemas/DHCP6ClientStatus'
+      - $ref: '#/components/schemas/NMSSettings'
+      - $ref: '#/components/schemas/NMSStatus'
+      - $ref: '#/components/schemas/Ieee8021xSettings'
+      - $ref: '#/components/schemas/Ieee802154BeaconStats'
+      - $ref: '#/components/schemas/RPLInstance'
+      - $ref: '#/components/schemas/FirmwareImageInfo'  
+      - $ref: '#/components/schemas/SysResetStats'
+      - $ref: '#/components/schemas/MplStats'
+      - $ref: '#/components/schemas/RPLStats' 
+      - $ref: '#/components/schemas/DHCP6Stats'
+      - $ref: '#/components/schemas/EventReport'  
+      - $ref: '#/components/schemas/EventIndex'
+      - $ref: '#/components/schemas/EventSubscribe'
+      - $ref: '#/components/schemas/EventStats'
+      - $ref: '#/components/schemas/NetworkRole'  
+      - $ref: '#/components/schemas/NetStat'
+
+    RegistrationRequestTLVs:
+      description: |
+        TLVs which may be contained in a registration POST request to the NMS.
+      anyOf:
+      - $ref: '#/components/schemas/DeviceID'
+      - $ref: '#/components/schemas/CurrentTime'
+              
+      - $ref: '#/components/schemas/HardwareDesc'
+      - $ref: '#/components/schemas/InterfaceDesc'
+      - $ref: '#/components/schemas/IPAddress'
+      - $ref: '#/components/schemas/NMSStatus'
+      - $ref: '#/components/schemas/WPANStatus'
+      - $ref: '#/components/schemas/RPLSettings'
+                
+      - $ref: '#/components/schemas/SessionID'
+      - $ref: '#/components/schemas/GroupInfo'
+      - $ref: '#/components/schemas/ReportSubscribe'
+
+    RegistrationResponseTLVs:
+      description: |
+        TLVs which may be contained in a registration response from the NMS.
+      anyOf:
+      - $ref: '#/components/schemas/SessionID'
+      - $ref: '#/components/schemas/GroupAssign'
+      - $ref: '#/components/schemas/ReportSubscribe'
+      - $ref: '#/components/schemas/DescriptionRequest'
+      - $ref: '#/components/schemas/NMSRedirectRequest'
+
+    TLVsPostAbleToNMS:
+      description: |
+        TLVs which may be POSTed to <nms-url>/c
+        There are several situations under which this can occur ...
+        1. Periodic metrics reports from a device.
+        2. Command responses from a device.
+        3. Asynchronous events reported by a device.
+        4. Asynchronous GET responses from a device.
+      anyOf:
+      - $ref: '#/components/schemas/TlvIndex'
+      - $ref: '#/components/schemas/DeviceID'
+      - $ref: '#/components/schemas/NMSRedirectRequest'
+      - $ref: '#/components/schemas/SessionID'
+      - $ref: '#/components/schemas/HardwareDesc'
+      - $ref: '#/components/schemas/InterfaceDesc'
+      - $ref: '#/components/schemas/ReportSubscribe'
+      - $ref: '#/components/schemas/IPAddress'
+      - $ref: '#/components/schemas/IPRoute'
+      - $ref: '#/components/schemas/CurrentTime'
+      - $ref: '#/components/schemas/RPLSettings'
+      - $ref: '#/components/schemas/Uptime'
+      - $ref: '#/components/schemas/InterfaceMetrics'
+      - $ref: '#/components/schemas/IPRouteRPLMetrics'
+      - $ref: '#/components/schemas/PingResponse'
+      - $ref: '#/components/schemas/Ieee8021xStatus'
+      - $ref: '#/components/schemas/Ieee80211iStatus'
+      - $ref: '#/components/schemas/WPANStatus'
+      - $ref: '#/components/schemas/DHCP6ClientStatus'
+      - $ref: '#/components/schemas/NMSSettings'
+      - $ref: '#/components/schemas/NMSStatus'
+      - $ref: '#/components/schemas/Ieee8021xSettings'
+      - $ref: '#/components/schemas/Ieee802154BeaconStats'
+      - $ref: '#/components/schemas/RPLInstance'
+      - $ref: '#/components/schemas/GroupInfo'
+      - $ref: '#/components/schemas/LowpanMacStats'
+      - $ref: '#/components/schemas/LowpanPhySettings'
+      - $ref: '#/components/schemas/TransferResponse'
+      - $ref: '#/components/schemas/LoadResponse'
+      - $ref: '#/components/schemas/CancelLoadResponse'
+      - $ref: '#/components/schemas/SetBackupResponse'
+      - $ref: '#/components/schemas/FirmwareImageInfo'
+      - $ref: '#/components/schemas/SysResetStats'
+      - $ref: '#/components/schemas/MplStats'
+      - $ref: '#/components/schemas/RPLStats'
+      - $ref: '#/components/schemas/DHCP6Stats'
+      - $ref: '#/components/schemas/EventReport'
+      - $ref: '#/components/schemas/EventIndex'
+      - $ref: '#/components/schemas/EventStats'
+
+    TLVsPostAbleToDevice:
+      description: |
+        TLVs which may be POSTed to <device-url>/c.
+        Commands and settings.
+      anyOf:
+      - $ref: '#/components/schemas/NMSRedirectRequest'
+      - $ref: '#/components/schemas/RPLSettings'
+      - $ref: '#/components/schemas/PingRequest'
+      - $ref: '#/components/schemas/RebootRequest'
+      - $ref: '#/components/schemas/NMSSettings'
+      - $ref: '#/components/schemas/Ieee8021xSettings'
+      - $ref: '#/components/schemas/GroupMatch'
+      - $ref: '#/components/schemas/LowpanPhySettings'
+      - $ref: '#/components/schemas/TransferRequest'
+      - $ref: '#/components/schemas/ImageBlock'
+      - $ref: '#/components/schemas/LoadRequest'
+      - $ref: '#/components/schemas/CancelLoadRequest'
+      - $ref: '#/components/schemas/SetBackupRequest'
+      - $ref: '#/components/schemas/SignatureValidity'
+      - $ref: '#/components/schemas/Signature'
+      - $ref: '#/components/schemas/SignatureSettings'
+      - $ref: '#/components/schemas/NetworkRole'
+      - $ref: '#/components/schemas/MplReset'
+      - $ref: '#/components/schemas/EventSubscribe'
+
+    TableTLVs:
+      description: |
+        Table TLVs.  Note: whole table access AND individual index access is permitted.
+      anyOf:
+      - $ref: '#/components/schemas/HardwareDesc'
+      - $ref: '#/components/schemas/InterfaceDesc'
+      - $ref: '#/components/schemas/IPAddress'
+      - $ref: '#/components/schemas/IPRoute'
+      - $ref: '#/components/schemas/InterfaceMetrics'
+      - $ref: '#/components/schemas/IPRouteRPLMetrics'
+      - $ref: '#/components/schemas/Ieee802154BeaconStats'
+      - $ref: '#/components/schemas/RPLInstance'
+      - $ref: '#/components/schemas/FirmwareImageInfo'
+      - $ref: '#/components/schemas/NetStat'
+      - $ref: '#/components/schemas/CertBundle'        
+
+    AllTLVs:
+      description: |
+        All CSMP defined TLVs.
+        This is used as an editorial starting point for the 
+        other TLV collections defined within.
+      anyOf:
+      - $ref: '#/components/schemas/TlvIndex'
+      - $ref: '#/components/schemas/DeviceID'
+      - $ref: '#/components/schemas/NMSRedirectRequest'
+      - $ref: '#/components/schemas/SessionID'
+      - $ref: '#/components/schemas/DescriptionRequest'
+      - $ref: '#/components/schemas/HardwareDesc'
+      - $ref: '#/components/schemas/InterfaceDesc'
+      - $ref: '#/components/schemas/ReportSubscribe'
+      - $ref: '#/components/schemas/IPAddress'
+      - $ref: '#/components/schemas/IPRoute'
+      - $ref: '#/components/schemas/CurrentTime'
+      - $ref: '#/components/schemas/RPLSettings'
+      - $ref: '#/components/schemas/Uptime'
+      - $ref: '#/components/schemas/InterfaceMetrics'
+      - $ref: '#/components/schemas/IPRouteRPLMetrics'
+      - $ref: '#/components/schemas/PingRequest'
+      - $ref: '#/components/schemas/PingResponse'
+      - $ref: '#/components/schemas/RebootRequest'
+      - $ref: '#/components/schemas/Ieee8021xStatus'
+      - $ref: '#/components/schemas/Ieee80211iStatus'
+      - $ref: '#/components/schemas/WPANStatus'
+      - $ref: '#/components/schemas/DHCP6ClientStatus'
+      - $ref: '#/components/schemas/NMSSettings'
+      - $ref: '#/components/schemas/NMSStatus'
+      - $ref: '#/components/schemas/Ieee8021xSettings'
+      - $ref: '#/components/schemas/Ieee802154BeaconStats'
+      - $ref: '#/components/schemas/RPLInstance'
+      - $ref: '#/components/schemas/GroupAssign'
+      - $ref: '#/components/schemas/GroupEvict'
+      - $ref: '#/components/schemas/GroupMatch'
+      - $ref: '#/components/schemas/GroupInfo'
+      - $ref: '#/components/schemas/LowpanMacStats'
+      - $ref: '#/components/schemas/LowpanPhySettings'
+      - $ref: '#/components/schemas/TransferRequest'
+      - $ref: '#/components/schemas/ImageBlock'
+      - $ref: '#/components/schemas/LoadRequest'
+      - $ref: '#/components/schemas/CancelLoadRequest'
+      - $ref: '#/components/schemas/SetBackupRequest'
+      - $ref: '#/components/schemas/TransferResponse'
+      - $ref: '#/components/schemas/LoadResponse'
+      - $ref: '#/components/schemas/CancelLoadResponse'
+      - $ref: '#/components/schemas/SetBackupResponse'
+      - $ref: '#/components/schemas/FirmwareImageInfo'
+      - $ref: '#/components/schemas/SignatureValidity'
+      - $ref: '#/components/schemas/Signature'
+      - $ref: '#/components/schemas/SignatureSettings'
+      - $ref: '#/components/schemas/SysResetStats'
+      - $ref: '#/components/schemas/NetStat'
+      - $ref: '#/components/schemas/NetworkRole'
+      - $ref: '#/components/schemas/CertBundle'      
+      - $ref: '#/components/schemas/MplStats'
+      - $ref: '#/components/schemas/MplReset'
+      - $ref: '#/components/schemas/RPLStats'
+      - $ref: '#/components/schemas/DHCP6Stats'
+      - $ref: '#/components/schemas/EventReport'
+      - $ref: '#/components/schemas/EventIndex'
+      - $ref: '#/components/schemas/EventSubscribe'
+      - $ref: '#/components/schemas/EventStats'
+      
+    #
+    # Object placeholders to allow OpenAPI to compile.
+    # Each of these is authoritatively defined in
+    # the CSMP .proto file.
+    #
+    TlvIndex:
+      type: object
+    DeviceID:
+      type: object
+    NMSRedirectRequest:
+      type: object
+    SessionID:
+      type: object
+    DescriptionRequest:
+      type: object
+    HardwareDesc:
+      type: object
+    InterfaceDesc:
+      type: object
+    ReportSubscribe:
+      type: object
+    IPAddress:
+      type: object
+    IPRoute:
+      type: object
+    CurrentTime:
+      type: object
+    RPLSettings:
+      type: object
+    Uptime:
+      type: object
+    InterfaceMetrics:
+      type: object
+    IPRouteRPLMetrics:
+      type: object
+    PingRequest:
+      type: object
+    PingResponse:
+      type: object
+    RebootRequest:
+      type: object
+    Ieee8021xStatus:
+      type: object
+    Ieee80211iStatus:
+      type: object
+    WPANStatus:
+      type: object
+    DHCP6ClientStatus:
+      type: object
+    NMSSettings:
+      type: object
+    NMSStatus:
+      type: object
+    Ieee8021xSettings:
+      type: object
+    Ieee802154BeaconStats:
+      type: object
+    RPLInstance:
+      type: object
+    GroupAssign:
+      type: object
+    GroupEvict:
+      type: object
+    GroupMatch:
+      type: object
+    GroupInfo:
+      type: object
+    LowpanMacStats:
+      type: object
+    LowpanPhySettings:
+      type: object
+    TransferRequest:
+      type: object
+    ImageBlock:
+      type: object
+    LoadRequest:
+      type: object
+    CancelLoadRequest:
+      type: object
+    SetBackupRequest:
+      type: object
+    TransferResponse:
+      type: object
+    LoadResponse:
+      type: object
+    CancelLoadResponse:
+      type: object
+    SetBackupResponse:
+      type: object
+    FirmwareImageInfo:
+      type: object
+    SignatureValidity:
+      type: object
+    Signature:
+      type: object
+    SignatureSettings:
+      type: object
+    SysResetStats:
+      type: object
+    NetStat:
+      type: object
+    NetworkRole:
+      type: object
+    CertBundle:
+      type: object
+    MplStats:
+      type: object
+    MplReset:
+      type: object
+    RPLStats:
+      type: object
+    DHCP6Stats:
+      type: object
+    EventReport:
+      type: object
+    EventIndex:
+      type: object
+    EventSubscribe:
+      type: object
+    EventStats:
+      type: object
