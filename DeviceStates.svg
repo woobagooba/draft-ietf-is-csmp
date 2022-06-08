@@ -1,0 +1,34 @@
+<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280.0 720.0">
+	<g>
+		<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+		<path d="M381.5 269.5C381.5 251.827 411.945 237.5 449.5 237.5 487.055 237.5 517.5 251.827 517.5 269.5 517.5 287.173 487.055 301.5 449.5 301.5 411.945 301.5 381.5 287.173 381.5 269.5Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFFFFF" fill-rule="evenodd"/>
+		<text font-family="sans-serif" font-weight="700" font-size="16" transform="translate(428.897 266)">Down</text>
+		<path d="M658.5 270C658.5 252.051 689.84 237.5 728.5 237.5 767.16 237.5 798.5 252.051 798.5 270 798.5 287.949 767.16 302.5 728.5 302.5 689.84 302.5 658.5 287.949 658.5 270Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFFFFF" fill-rule="evenodd"/>
+		<text font-family="sans-serif" font-weight="700" font-size="16" transform="translate(688.713 266)">Registering</text>
+		<path d="M569.5 525.5C569.5 509.484 598.825 496.5 635 496.5 671.175 496.5 700.5 509.484 700.5 525.5 700.5 541.516 671.175 554.5 635 554.5 598.825 554.5 569.5 541.516 569.5 525.5Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFFFFF" fill-rule="evenodd"/>
+		<text font-family="sans-serif" font-weight="700" font-size="16" transform="translate(624.547 524)">Up</text>
+		<path d="M517.502 269 651.668 269.413 651.665 270.413 517.499 270ZM650.346 265.909 658.333 269.933 650.321 273.909Z"/>
+		<path d="M0.488968-0.104452 42.603 197.043 41.625 197.252-0.488968 0.104452ZM45.7472 195.008 43.5067 203.667 37.9237 196.679Z" transform="matrix(-1 0 0 1 679.007 292.5)"/>
+		<rect x="534" y="213" width="112" height="50" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(543.477 228)">Device issues <tspan font-size="11" x="0" y="13">Registration Request </tspan><tspan font-size="11" x="0" y="26">to NMS</tspan></text>
+		<rect x="589" y="310" width="124" height="83" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(598.9 325)">Registration ACK sent <tspan font-size="11" x="0" y="13">to Device (success)</tspan><tspan font-size="11" x="8" y="26">AND</tspan><tspan font-size="11" x="0" y="39">Metrics report received </tspan><tspan font-size="11" x="0" y="52">from Device </tspan></text>
+		<rect x="826" y="102" width="107" height="49" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(835.327 117)">Device added to <tspan font-size="11" x="0" y="13">NMS inventory</tspan></text>
+		<path d="M661.5 121C661.5 103.051 691.945 88.5001 729.5 88.5001 767.055 88.5001 797.5 103.051 797.5 121 797.5 138.949 767.055 153.5 729.5 153.5 691.945 153.5 661.5 138.949 661.5 121Z" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFFFFF" fill-rule="evenodd"/>
+		<text font-family="sans-serif" font-weight="700" font-size="16" transform="translate(698.84 118)">Unheard</text>
+		<path d="M0.000503322-0.5 79.4805-0.419991 79.4795 0.580008-0.000503322 0.5ZM78.1507-3.92133 86.1467 0.0867192 78.1426 4.07866Z" transform="matrix(-1 0 0 1 896.647 122.5)"/>
+		<path d="M0.499948-0.00721574 1.61707 77.3935 0.617176 77.408-0.499948 0.00721574ZM5.09746 76.0098 1.21333 84.0667-2.9017 76.1252Z" transform="matrix(-1 0 0 1 729.713 153.5)"/>
+		<rect x="624" y="176" width="214" height="30" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(633.159 190)">Device issues Registration Request to NMS</text>
+		<path d="M497.959 292.302 586.845 498.945 585.927 499.34 497.041 292.698ZM589.533 496.337 589.02 505.267 582.184 499.498Z"/>
+		<path d="M569.44 525.424 452.219 307.607 453.099 307.133 570.32 524.95ZM449.769 310.44 449.5 301.5 456.814 306.649Z"/>
+		<path d="M0.487129-0.112719 45.871 196.019 44.8967 196.245-0.487129 0.112719ZM48.9802 193.931 46.8867 202.627 41.1862 195.734Z" transform="matrix(1 0 0 -1 681.5 505.127)"/>
+		<rect x="652" y="436" width="210" height="32" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(661.128 451)">Device issues Registration Request to NMS</text>
+		<rect x="344" y="349" width="160" height="49" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(353.633 364)">Device metrics are not received <tspan font-size="11" x="0" y="13">for mark</tspan><tspan font-size="11" x="36.8333" y="13">-</tspan>down<tspan font-size="11" x="64" y="13">-</tspan>threshold.</text>
+		<rect x="519" y="391" width="126" height="32" fill="#FFFFFF"/>
+		<text font-family="sans-serif" font-weight="400" font-size="11" transform="translate(528.7 406)">Metrics report received <tspan font-size="11" x="0" y="13">from Device.</tspan></text>
+	</g>
+</svg>
