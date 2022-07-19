@@ -26,13 +26,13 @@
      inkscape:document-units="in"
      showgrid="true"
      inkscape:zoom="0.72515434"
-     inkscape:cx="397.15683"
-     inkscape:cy="561.25983"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:cx="337.85911"
+     inkscape:cy="550.9172"
+     inkscape:window-width="1350"
+     inkscape:window-height="1008"
+     inkscape:window-x="318"
+     inkscape:window-y="42"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1">
     <inkscape:grid
        type="xygrid"
@@ -40,6 +40,144 @@
   </sodipodi:namedview>
   <defs
      id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient17879">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop17875" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop17877" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect16714"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect15198"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect13556"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect12790"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect12774"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect12008"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect11242"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <linearGradient
+       id="linearGradient7779"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop7777" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1814"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1810"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <symbol
        id="Connector">
       <title
@@ -64,6 +202,143 @@
          style="fill:none;stroke-width:2"
          id="path332" />
     </symbol>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3-0-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-5-1" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect13556-9"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3-0-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-5-9" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect13556-8"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient17879"
+       id="linearGradient17943"
+       x1="102.33752"
+       y1="139.28662"
+       x2="152.21207"
+       y2="139.28662"
+       gradientUnits="userSpaceOnUse" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3-0-2-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-5-1-6" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect13556-9-3"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -73,7 +348,7 @@
        xlink:href="#Connector"
        style="fill:#ffffff;stroke:#000000"
        id="use10746-6-0"
-       transform="matrix(1.2003884,0,0,0.55981378,6.2951901,132.41936)" />
+       transform="matrix(1.2003884,0,0,0.55981378,10.308703,151.02747)" />
     <use
        xlink:href="#Connector"
        style="fill:#ffffff;stroke:#000000"
@@ -121,14 +396,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
-       x="80.147469"
-       y="175.71915"
+       x="84.16098"
+       y="194.32726"
        id="text720-6"><tspan
          sodipodi:role="line"
          id="tspan718-7"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="80.147469"
-         y="175.71915">Registered</tspan></text>
+         x="84.16098"
+         y="194.32726">Registered</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
@@ -143,79 +418,62 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.47403px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.279627"
-       x="72.494743"
-       y="24.867632"
+       x="75.965233"
+       y="21.760513"
        id="text1233"
-       transform="scale(0.94620101,1.0568579)"><tspan
+       transform="scale(0.946201,1.0568579)"><tspan
          sodipodi:role="line"
          id="tspan1231"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.47403px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.279627"
-         x="72.494743"
-         y="24.867632">Device added to </tspan><tspan
+         x="75.965233"
+         y="21.760513">Device added to </tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.47403px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.279627"
-         x="72.494743"
-         y="30.460169"
+         x="75.965233"
+         y="27.35305"
          id="tspan1296">NMS inventory</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
-       x="5.8378386"
-       y="122.95947"
+       x="8.3918924"
+       y="156.16217"
        id="text1241"><tspan
          sodipodi:role="line"
          id="tspan1239"
          style="stroke-width:0.264583"
-         x="5.8378386"
-         y="122.95947">Device metrice not </tspan><tspan
+         x="8.3918924"
+         y="156.16217">Device metrice not </tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="5.8378386"
-         y="128.25113"
+         x="8.3918924"
+         y="161.45383"
          id="tspan1280">received for </tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="5.8378386"
-         y="133.5428"
+         x="8.3918924"
+         y="166.7455"
          id="tspan1312">mark-down-threshold</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
-       x="55.459457"
-       y="145.21622"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.254;stroke-dasharray:none"
+       x="51.099747"
+       y="119.633"
        id="text1245"><tspan
          sodipodi:role="line"
          id="tspan1243"
-         style="stroke-width:0.264583"
-         x="55.459457"
-         y="145.21622">Metrics report </tspan><tspan
+         style="stroke-width:0.254;stroke-dasharray:none"
+         x="51.099747"
+         y="119.633">Metrics report </tspan><tspan
          sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="55.459457"
-         y="150.50787"
-         id="tspan1282">received from Device</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.17729px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.26108"
-       x="93.248932"
-       y="116.75844"
-       id="text1249"
-       transform="scale(1.0134164,0.98676123)"><tspan
+         style="stroke-width:0.254;stroke-dasharray:none"
+         x="51.099747"
+         y="124.92467"
+         id="tspan1282">received from </tspan><tspan
          sodipodi:role="line"
-         style="stroke-width:0.26108"
-         x="93.248932"
-         y="116.75844"
-         id="tspan1284">Registration ACK and </tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.26108"
-         x="93.248932"
-         y="121.98005"
-         id="tspan1288">first metrics received </tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.26108"
-         x="93.248932"
-         y="127.20166"
-         id="tspan1302">from Devicei</tspan></text>
+         style="stroke-width:0.254;stroke-dasharray:none"
+         x="51.099747"
+         y="130.21634"
+         id="tspan17654">Device</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
@@ -240,44 +498,108 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
-       x="131.11978"
-       y="56.483036"
-       id="text1237-4-7-1"><tspan
-         sodipodi:role="line"
-         id="tspan1235-7-0-1"
-         style="stroke-width:0.264583"
-         x="131.11978"
-         y="56.483036">Device issues </tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="131.11978"
-         y="61.7747"
-         id="tspan1350-0">Registration Request </tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.264583"
-         x="131.11978"
-         y="67.06636"
-         id="tspan1354-9">to NMS</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
-       x="138.78194"
-       y="137.48303"
+       x="137.49445"
+       y="156.67467"
        id="text1237-4-7-8"><tspan
          sodipodi:role="line"
          id="tspan1235-7-0-9"
          style="stroke-width:0.264583"
-         x="138.78194"
-         y="137.48303">Device issues </tspan><tspan
+         x="137.49445"
+         y="156.67467">Device issues </tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="138.78194"
-         y="142.77469"
+         x="137.49445"
+         y="161.96632"
          id="tspan1350-4">Registration Request </tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="138.78194"
-         y="148.06636"
+         x="137.49445"
+         y="167.258"
          id="tspan1354-8">to NMS</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.13517;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleStart-3);opacity:0.4983165"
+       d="M 124.05847,33.923421 51.235689,34.399548"
+       id="path4015-5" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.05222;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleStart-3-0);opacity:0.48148148"
+       d="M 122.93547,91.565268 70.846002,92.13718"
+       id="path4015-5-3" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.14411;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart-3-0);opacity:0.54545455"
+       d="M 75.947905,186.47773 C 61.072885,159.94331 46.197702,133.40859 31.322363,106.87361"
+       id="path13554"
+       inkscape:path-effect="#path-effect13556"
+       inkscape:original-d="M 75.947905,186.47773 C 61.072973,159.94326 46.19779,133.40855 31.322363,106.87361"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.975946;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart-3-0-8);opacity:0.39393939"
+       d="m 107.24085,178.69404 c 9.8989,-24.2844 19.79791,-48.56909 29.69702,-72.85401"
+       id="path13554-0"
+       inkscape:path-effect="#path-effect13556-8"
+       inkscape:original-d="m 107.24085,178.69404 c 9.89882,-24.28443 19.79783,-48.56912 29.69702,-72.85401"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.27;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart);opacity:0.49494949"
+       d="m 153.6081,47.797296 c 0,9.365128 0,18.729992 0,28.094593"
+       id="path16712"
+       inkscape:path-effect="#path-effect16714"
+       inkscape:original-d="m 153.6081,47.797296 c 2.7e-4,9.365128 2.7e-4,18.729992 0,28.094593" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
+       x="132.29167"
+       y="58.208332"
+       id="text1237-4-7-1"><tspan
+         sodipodi:role="line"
+         id="tspan1235-7-0-1"
+         style="stroke-width:0.264583"
+         x="132.29167"
+         y="58.208332">Device issues </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="132.29167"
+         y="63.499992"
+         id="tspan1350-0">Registration Request </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="132.29167"
+         y="68.791656"
+         id="tspan1354-9">to NMS</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.11946;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart-3-0-2);opacity:0.55555556"
+       d="M 53.420824,105.95336 C 65.799567,128.93625 78.17813,151.91881 90.5565,174.90101"
+       id="path13554-1"
+       inkscape:path-effect="#path-effect13556-9"
+       inkscape:original-d="m 53.420824,105.95336 c 12.378821,22.98285 24.75738,45.96541 37.135676,68.94765"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.17729px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:1;fill:#000000;fill-opacity:0.996212;stroke-width:0.26108"
+       x="85.799629"
+       y="137.24031"
+       id="text1249"
+       transform="scale(1.0134164,0.98676122)"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:0.996212;stroke-width:0.26108"
+         x="85.799629"
+         y="137.24031"
+         id="tspan1284">Registration ACK and </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:0.996212;stroke-width:0.26108"
+         x="85.799629"
+         y="142.46193"
+         id="tspan1288">first metrics received </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:0.996212;stroke-width:0.26108"
+         x="85.799629"
+         y="147.68353"
+         id="tspan1302">from Devicei</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.02895;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart-3-0-2-0);opacity:0.55555556"
+       d="m 155.27507,107.80249 c -10.48187,22.93067 -20.9636,45.86102 -31.44517,68.79103"
+       id="path13554-1-9"
+       inkscape:path-effect="#path-effect13556-9-3"
+       inkscape:original-d="m 155.27507,107.80249 c -10.48195,22.93064 -20.96366,45.86099 -31.44517,68.79103"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
