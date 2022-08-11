@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg baseProfile="tiny" height="1375" version="1.2" viewBox="0 0 897 1375" width="897" xmlns="http://www.w3.org/2000/svg">
+  <path d="M-604,-1285.0208333333335 L-604,0" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="185.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="196.97916666666674" y="36.53124999999962">
+    Device1  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="185.5" y="1332.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="196.97916666666674" y="1353.59375">
+    Device1  </text>
+  <path d="M-310,-1285.0208333333335 L-310,0" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="479.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="491.15494791666674" y="36.53124999999962">
+    Device2  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="479.5" y="1332.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="491.15494791666674" y="1353.59375">
+    Device2  </text>
+  <path d="M26,-1285.0208333333335 L26,0" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="53" x="828.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="840.00390625" y="36.53124999999962">
+    NMS  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="53" x="828.5" y="1332.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="840.00390625" y="1353.59375">
+    NMS  </text>
+  <path d="M-610,-1272 L-610,-1272 L24,-1272 L32,-1264 L32,-1240 L-610,-1240 L-610,-1272" fill="white" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M23.974609375000114,-1271.6875000000002 L23.974609375000114,-1263.6875000000002 L31.974609375000114,-1263.6875000000002" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="439.4388020833334" y="81.90624999999984">
+    Disseminate Firmware Details  </text>
+  <rect fill="white" height="15.333333333333258" width="238.87369791666674" x="567.1484375" y="106.18749999999977"/>
+  <rect fill="white" height="15.333333333333258" width="223.3007812500001" x="574.9348958333334" y="121.70833333333303"/>
+  <rect fill="white" height="15.333333333333258" width="252.06380208333337" x="560.5533854166667" y="137.22916666666652"/>
+  <rect fill="white" height="15.333333333333258" width="198.37890625" x="587.3958333333335" y="152.74999999999977"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="567.1484375" y="119.5208333333331">
+    [1] NON POST to /c with options a, r  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="574.9348958333334" y="135.04166666666637">
+    1. MUST contain GroupMatch TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="560.5533854166667" y="150.56249999999986">
+    2. MUST contain TransferRequest TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="587.3958333333335" y="166.08333333333312">
+    3. MUST contain Signing TLVs  </text>
+  <path d="M-309.80403645833326,-1163 L25.974609375000114,-1163" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-1163 L-309,-1163 L-301,-1171 L-301,-1163 L-301,-1155 L-309,-1163" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="23.125" x="359.54557291666674" y="152.75"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.54557291666674" y="166.08333333333334">
+    [2]   </text>
+  <path d="M-603.9798177083333,-1163 L-310.80403645833326,-1163" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-1163 L-603,-1163 L-595,-1171 L-595,-1163 L-595,-1155 L-603,-1163" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-307.80403645833326,-1163.2291666666667 C-307.80403645833326,-1161.5723124172666,-309.14718220893326,-1160.2291666666667,-310.80403645833326,-1160.2291666666667 C-312.46089070773326,-1160.2291666666667,-313.80403645833326,-1161.5723124172666,-313.80403645833326,-1163.2291666666667 C-313.80403645833326,-1164.8860209160669,-312.46089070773326,-1166.2291666666667,-310.80403645833326,-1166.2291666666667 C-309.14718220893326,-1166.2291666666667,-307.80403645833326,-1164.8860209160669,-307.80403645833326,-1163.2291666666667" fill="black" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="207.6953125" x="10.072916666666742" y="182.60416666666674"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="10.072916666666742" y="195.93750000000009">
+    [3] Store file meta information.  </text>
+  <path d="M-603.9798177083333,-1142 L-545.3131510416665,-1142 Q-537.3131510416665,-1142,-537.3131510416665,-1134 L-537.3131510416665,-1133 Q-537.3131510416665,-1125,-545.3131510416665,-1125 L-603.9798177083333,-1125" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-1126 L-603,-1126 L-595,-1134 L-595,-1126 L-595,-1118 L-603,-1126" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="207.6953125" x="304.24869791666674" y="220.21875"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="304.24869791666674" y="233.55208333333334">
+    [4] Store file meta information.  </text>
+  <path d="M-309.80403645833326,-1105 L-251.13736979166652,-1105 Q-243.13736979166652,-1105,-243.13736979166652,-1097 L-243.13736979166652,-1096 Q-243.13736979166652,-1088,-251.13736979166652,-1088 L-309.80403645833326,-1088" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-1088 L-309,-1088 L-301,-1096 L-301,-1088 L-301,-1080 L-309,-1088" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-610,-1075 L-610,-1075 L-313,-1075 L-305,-1067 L-305,-1043 L-610,-1043 L-610,-1075" fill="white" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-312.80403645833326,-1074.6666666666667 L-312.80403645833326,-1066.6666666666667 L-304.80403645833326,-1066.6666666666667" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="224.27213541666674" y="278.9270833333333">
+    Wait random delay based on the &#34;a&#34; option.  </text>
+  <rect fill="white" height="15.333333333333371" width="126.63411458333337" x="623.2682291666667" y="303.20833333333326"/>
+  <rect fill="white" height="15.333333333333371" width="261.94010416666663" x="555.6152343750001" y="318.72916666666663"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="623.2682291666667" y="316.5416666666666">
+    [5] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="555.6152343750001" y="332.06249999999994">
+    1. MUST contain TransferResponse TLV  </text>
+  <path d="M-309.80403645833326,-997 L25.974609375000114,-997" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M25,-997 L25,-997 L17,-1005 L17,-997 L17,-989 L25,-997" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="126.63411458333331" x="476.1803385416668" y="348.58333333333337"/>
+  <rect fill="white" height="15.333333333333371" width="261.94010416666663" x="408.5273437500001" y="364.10416666666674"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="476.1803385416668" y="361.9166666666667">
+    [6] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="408.5273437500001" y="377.43750000000006">
+    1. MUST contain TransferResponse TLV  </text>
+  <path d="M-603.9798177083333,-952 L25.974609375000114,-952" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M25,-952 L25,-952 L17,-960 L17,-952 L17,-944 L25,-952" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-610,-939 L-610,-939 L24,-939 L32,-931 L32,-907 L-610,-907 L-610,-939" fill="white" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M23.974609375000114,-938.5416666666666 L23.974609375000114,-930.5416666666666 L31.974609375000114,-930.5416666666666" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="465.0898437500001" y="415.0520833333333">
+    Transfer Image Blocks  </text>
+  <rect fill="white" height="15.333333333333371" width="126.63411458333337" x="623.2682291666667" y="439.33333333333337"/>
+  <rect fill="white" height="15.333333333333371" width="223.30078125" x="574.9348958333335" y="454.85416666666674"/>
+  <rect fill="white" height="15.333333333333371" width="219.55078125" x="576.8098958333335" y="470.375"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="623.2682291666667" y="452.6666666666667">
+    [7] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="574.9348958333335" y="468.18750000000006">
+    1. MUST contain GroupMatch TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="576.8098958333335" y="483.7083333333333">
+    2. MUST contain ImageBlock TLV  </text>
+  <path d="M-309.80403645833326,-846 L25.974609375000114,-846" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-846 L-309,-846 L-301,-854 L-301,-846 L-301,-838 L-309,-846" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="23.125" x="359.54557291666674" y="470.375"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.54557291666674" y="483.7083333333333">
+    [8]   </text>
+  <path d="M-603.9798177083333,-846 L-310.80403645833326,-846" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-846 L-603,-846 L-595,-854 L-595,-846 L-595,-838 L-603,-846" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-307.80403645833326,-845.6041666666666 C-307.80403645833326,-843.9473124172666,-309.14718220893326,-842.6041666666666,-310.80403645833326,-842.6041666666666 C-312.46089070773326,-842.6041666666666,-313.80403645833326,-843.9473124172666,-313.80403645833326,-845.6041666666666 C-313.80403645833326,-847.2610209160666,-312.46089070773326,-848.6041666666666,-310.80403645833326,-848.6041666666666 C-309.14718220893326,-848.6041666666666,-307.80403645833326,-847.2610209160666,-307.80403645833326,-845.6041666666666" fill="black" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="144.04296875" x="73.72526041666674" y="500.22916666666663"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="73.72526041666674" y="513.5625">
+    [9] Store image block  </text>
+  <path d="M-603.9798177083333,-825 L-545.3131510416665,-825 Q-537.3131510416665,-825,-537.3131510416665,-817 L-537.3131510416665,-816 Q-537.3131510416665,-808,-545.3131510416665,-808 L-603.9798177083333,-808" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-808 L-603,-808 L-595,-816 L-595,-808 L-595,-800 L-603,-808" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="152.52604166666669" x="359.41796875000006" y="537.84375"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.41796875000006" y="551.1770833333334">
+    [10] Store image block  </text>
+  <path d="M-309.80403645833326,-787 L-251.13736979166652,-787 Q-243.13736979166652,-787,-243.13736979166652,-779 L-243.13736979166652,-778 Q-243.13736979166652,-770,-251.13736979166652,-770 L-309.80403645833326,-770" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-770 L-309,-770 L-301,-778 L-301,-770 L-301,-762 L-309,-770" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="135.1171875" x="619.0266927083335" y="575.4583333333334"/>
+  <rect fill="white" height="15.333333333333371" width="227.5390625" x="572.8157552083335" y="590.9791666666667"/>
+  <rect fill="white" height="15.333333333333371" width="223.7890625" x="574.6907552083335" y="606.5"/>
+  <rect fill="white" height="15.333333333333371" width="308.27473958333337" x="532.4479166666667" y="622.0208333333334"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="619.0266927083335" y="588.7916666666667">
+    [11] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="572.8157552083335" y="604.3125000000001">
+    1. MUST contain GroupMatch TLV.  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="574.6907552083335" y="619.8333333333334">
+    2. MUST contain ImageBlock TLV.  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="532.4479166666667" y="635.3541666666667">
+    3.  MUST contain DescriptionRequest TLV (75)  </text>
+  <path d="M-309.80403645833326,-694 L25.974609375000114,-694" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-694 L-309,-694 L-301,-702 L-301,-694 L-301,-686 L-309,-694" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="31.608072916666686" x="355.30403645833337" y="622.0208333333334"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="355.30403645833337" y="635.3541666666667">
+    [12]   </text>
+  <path d="M-603.9798177083333,-694 L-310.80403645833326,-694" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-694 L-603,-694 L-595,-702 L-595,-694 L-595,-686 L-603,-694" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-307.80403645833326,-693.9583333333333 C-307.80403645833326,-692.3014790839333,-309.14718220893326,-690.9583333333333,-310.80403645833326,-690.9583333333333 C-312.46089070773326,-690.9583333333333,-313.80403645833326,-692.3014790839333,-313.80403645833326,-693.9583333333333 C-313.80403645833326,-695.6151875827333,-312.46089070773326,-696.9583333333333,-310.80403645833326,-696.9583333333333 C-309.14718220893326,-696.9583333333333,-307.80403645833326,-695.6151875827333,-307.80403645833326,-693.9583333333333" fill="black" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="152.52604166666674" x="65.2421875" y="651.875"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="65.2421875" y="665.2083333333334">
+    [13] Store image block  </text>
+  <path d="M-603.9798177083333,-673 L-545.3131510416665,-673 Q-537.3131510416665,-673,-537.3131510416665,-665 L-537.3131510416665,-664 Q-537.3131510416665,-656,-545.3131510416665,-656 L-603.9798177083333,-656" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-656 L-603,-656 L-595,-664 L-595,-656 L-595,-648 L-603,-656" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="152.52604166666669" x="359.41796875000006" y="689.4895833333334"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.41796875000006" y="702.8229166666667">
+    [14] Store image block  </text>
+  <path d="M-309.80403645833326,-635 L-251.13736979166652,-635 Q-243.13736979166652,-635,-243.13736979166652,-627 L-243.13736979166652,-626 Q-243.13736979166652,-618,-251.13736979166652,-618 L-309.80403645833326,-618" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-619 L-309,-619 L-301,-627 L-301,-619 L-301,-611 L-309,-619" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-610,-605 L-610,-605 L-313,-605 L-305,-597 L-305,-573 L-610,-573 L-610,-605" fill="white" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-312.80403645833326,-605.3958333333333 L-312.80403645833326,-597.3958333333333 L-304.80403645833326,-597.3958333333333" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="224.27213541666674" y="748.1979166666667">
+    Wait random delay based on the &#34;a&#34; option.  </text>
+  <rect fill="white" height="15.333333333333371" width="135.1171875" x="619.0266927083335" y="772.4791666666666"/>
+  <rect fill="white" height="15.333333333333371" width="271.328125" x="550.9212239583335" y="788"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="619.0266927083335" y="785.8125">
+    [15] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="550.9212239583335" y="801.3333333333334">
+    1. MUST contain FirmwareImageInfo TLV  </text>
+  <path d="M-309.80403645833326,-528 L25.974609375000114,-528" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M25,-528 L25,-528 L17,-536 L17,-528 L17,-520 L25,-528" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="135.11718750000006" x="471.9388020833334" y="817.8541666666666"/>
+  <rect fill="white" height="15.333333333333258" width="271.32812500000006" x="403.8333333333334" y="833.375"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="471.9388020833334" y="831.1875">
+    [16] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="403.8333333333334" y="846.7083333333334">
+    1. MUST contain FirmwareImageInfo TLV  </text>
+  <path d="M-603.9798177083333,-483 L25.974609375000114,-483" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M25,-483 L25,-483 L17,-491 L17,-483 L17,-475 L25,-483" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="135.1171875" x="619.0266927083335" y="863.2291666666666"/>
+  <rect fill="white" height="15.333333333333258" width="227.5390625" x="572.8157552083335" y="878.75"/>
+  <rect fill="white" height="15.333333333333371" width="219.55078125" x="576.8098958333335" y="894.2708333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="619.0266927083335" y="876.5625">
+    [17] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="572.8157552083335" y="892.0833333333334">
+    1. MUST contain GroupMatch TLV.  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="576.8098958333335" y="907.6041666666666">
+    2. MUST contain ImageBlock TLV  </text>
+  <path d="M-309.80403645833326,-422 L25.974609375000114,-422" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-422 L-309,-422 L-301,-430 L-301,-422 L-301,-414 L-309,-422" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="31.608072916666686" x="355.30403645833337" y="894.2708333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="355.30403645833337" y="907.6041666666666">
+    [18]   </text>
+  <path d="M-603.9798177083333,-422 L-310.80403645833326,-422" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-422 L-603,-422 L-595,-430 L-595,-422 L-595,-414 L-603,-422" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-307.80403645833326,-421.70833333333337 C-307.80403645833326,-420.0514790839334,-309.14718220893326,-418.70833333333337,-310.80403645833326,-418.70833333333337 C-312.46089070773326,-418.70833333333337,-313.80403645833326,-420.0514790839334,-313.80403645833326,-421.70833333333337 C-313.80403645833326,-423.36518758273337,-312.46089070773326,-424.70833333333337,-310.80403645833326,-424.70833333333337 C-309.14718220893326,-424.70833333333337,-307.80403645833326,-423.36518758273337,-307.80403645833326,-421.70833333333337" fill="black" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="152.52604166666674" x="65.2421875" y="924.125"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="65.2421875" y="937.4583333333334">
+    [19] Store image block  </text>
+  <path d="M-603.9798177083333,-401 L-545.3131510416665,-401 Q-537.3131510416665,-401,-537.3131510416665,-393 L-537.3131510416665,-392 Q-537.3131510416665,-384,-545.3131510416665,-384 L-603.9798177083333,-384" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-384 L-603,-384 L-595,-392 L-595,-384 L-595,-376 L-603,-384" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333371" width="152.52604166666669" x="359.41796875000006" y="961.7395833333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.41796875000006" y="975.0729166666666">
+    [20] Store image block  </text>
+  <path d="M-309.80403645833326,-363 L-251.13736979166652,-363 Q-243.13736979166652,-363,-243.13736979166652,-355 L-243.13736979166652,-354 Q-243.13736979166652,-346,-251.13736979166652,-346 L-309.80403645833326,-346" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-346 L-309,-346 L-301,-354 L-301,-346 L-301,-338 L-309,-346" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-610,-333 L-610,-333 L24,-333 L32,-325 L32,-301 L-610,-301 L-610,-333" fill="white" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M23.974609375000114,-333.14583333333337 L23.974609375000114,-325.14583333333337 L31.974609375000114,-325.14583333333337" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="372.61588541666674" y="1020.4479166666666">
+    Transfer Final Image Block, Request Image Status  </text>
+  <rect fill="white" height="15.333333333333485" width="247.35677083333337" x="562.9069010416667" y="1044.7291666666665"/>
+  <rect fill="white" height="15.333333333333258" width="227.5390625" x="572.8157552083335" y="1060.25"/>
+  <rect fill="white" height="15.333333333333485" width="219.55078125" x="576.8098958333335" y="1075.7708333333333"/>
+  <rect fill="white" height="15.333333333333485" width="304.03645833333337" x="534.5670572916667" y="1091.2916666666665"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="562.9069010416667" y="1058.0624999999998">
+    [21] NON POST to /c with options a, r  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="572.8157552083335" y="1073.5833333333333">
+    1. MUST contain GroupMatch TLV.  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="576.8098958333335" y="1089.1041666666665">
+    2. MUST contain ImageBlock TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="534.5670572916667" y="1104.6249999999998">
+    3. MUST contain DescriptionRequest TLV (75)  </text>
+  <path d="M-309.80403645833326,-225 L25.974609375000114,-225" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-225 L-309,-225 L-301,-233 L-301,-225 L-301,-217 L-309,-225" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="31.608072916666686" x="355.30403645833337" y="1091.2916666666667"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="355.30403645833337" y="1104.625">
+    [22]   </text>
+  <path d="M-603.9798177083333,-225 L-310.80403645833326,-225" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-225 L-603,-225 L-595,-233 L-595,-225 L-595,-217 L-603,-225" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-307.80403645833326,-224.6875 C-307.80403645833326,-223.0306457505999,-309.14718220893326,-221.6875,-310.80403645833326,-221.6875 C-312.46089070773326,-221.6875,-313.80403645833326,-223.0306457505999,-313.80403645833326,-224.6875 C-313.80403645833326,-226.3443542494001,-312.46089070773326,-227.6875,-310.80403645833326,-227.6875 C-309.14718220893326,-227.6875,-307.80403645833326,-226.3443542494001,-307.80403645833326,-224.6875" fill="black" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333485" width="152.52604166666674" x="65.2421875" y="1121.1458333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="65.2421875" y="1134.4791666666665">
+    [23] Store image block  </text>
+  <path d="M-603.9798177083333,-204 L-545.3131510416665,-204 Q-537.3131510416665,-204,-537.3131510416665,-196 L-537.3131510416665,-195 Q-537.3131510416665,-187,-545.3131510416665,-187 L-603.9798177083333,-187" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-603,-187 L-603,-187 L-595,-195 L-595,-187 L-595,-179 L-603,-187" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="152.52604166666669" x="359.41796875000006" y="1158.7604166666667"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.41796875000006" y="1172.09375">
+    [24] Store image block  </text>
+  <path d="M-309.80403645833326,-166 L-251.13736979166652,-166 Q-243.13736979166652,-166,-243.13736979166652,-158 L-243.13736979166652,-157 Q-243.13736979166652,-149,-251.13736979166652,-149 L-309.80403645833326,-149" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-309,-149 L-309,-149 L-301,-157 L-301,-149 L-301,-141 L-309,-149" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-610,-136 L-610,-136 L-313,-136 L-305,-128 L-305,-104 L-610,-104 L-610,-136" fill="white" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M-312.80403645833326,-136.125 L-312.80403645833326,-128.125 L-304.80403645833326,-128.125" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="224.27213541666674" y="1217.46875">
+    Wait random delay based on the &#34;a&#34; option.  </text>
+  <rect fill="white" height="15.333333333333258" width="135.1171875" x="619.0266927083335" y="1241.75"/>
+  <rect fill="white" height="15.333333333333485" width="271.328125" x="550.9212239583335" y="1257.2708333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="619.0266927083335" y="1255.0833333333333">
+    [25] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="550.9212239583335" y="1270.6041666666665">
+    1. MUST contain FirmwareImageInfo TLV  </text>
+  <path d="M-309.80403645833326,-59 L25.974609375000114,-59" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M25,-59 L25,-59 L17,-67 L17,-59 L17,-51 L25,-59" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <rect fill="white" height="15.333333333333258" width="135.11718750000006" x="471.9388020833334" y="1287.125"/>
+  <rect fill="white" height="15.333333333333485" width="271.32812500000006" x="403.8333333333334" y="1302.6458333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="471.9388020833334" y="1300.4583333333333">
+    [26] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="403.8333333333334" y="1315.9791666666665">
+    1. MUST contain FirmwareImageInfo TLV  </text>
+  <path d="M-603.9798177083333,-13 L25.974609375000114,-13" fill="none" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+  <path d="M25,-13 L25,-13 L17,-21 L17,-13 L17,-5 L25,-13" fill="black" stroke="black" stroke-width="1" transform="translate(828.5 1332.5)"/>
+</svg>

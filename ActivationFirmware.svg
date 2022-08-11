@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg baseProfile="tiny" height="769" version="1.2" viewBox="0 0 962 769" width="962" xmlns="http://www.w3.org/2000/svg">
+  <path d="M-588,-679.6250000000001 L-588,0" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="268.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="279.61197916666663" y="36.92708333333311">
+    Device1  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="268.5" y="727.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="279.61197916666663" y="748.59375">
+    Device1  </text>
+  <path d="M-286,-679.6250000000001 L-286,0" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="570.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="581.6731770833333" y="36.92708333333311">
+    Device2  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="570.5" y="727.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="581.6731770833333" y="748.59375">
+    Device2  </text>
+  <path d="M26,-679.6250000000001 L26,0" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="53" x="894.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="906.00390625" y="36.92708333333311">
+    NMS  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="53" x="894.5" y="727.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="906.00390625" y="748.59375">
+    NMS  </text>
+  <path d="M-593,-666 L-593,-666 L24,-666 L32,-658 L32,-634 L-593,-634 L-593,-666" fill="white" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M23.974609374999886,-666.2916666666667 L23.974609374999886,-658.2916666666667 L31.974609374999886,-658.2916666666667" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="545.5325520833333" y="82.30208333333321">
+    Schedule FW Reload  </text>
+  <rect fill="white" height="15.333333333333371" width="238.87369791666674" x="645.4075520833333" y="106.58333333333326"/>
+  <rect fill="white" height="15.333333333333371" width="224.7851562500001" x="652.4518229166665" y="122.10416666666663"/>
+  <rect fill="white" height="15.333333333333371" width="228.7109375000001" x="650.4889322916665" y="137.6249999999999"/>
+  <rect fill="white" height="15.333333333333371" width="198.37890625" x="665.6549479166666" y="153.14583333333326"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="645.4075520833333" y="119.91666666666659">
+    [1] NON POST to /c with options a, r  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="652.4518229166665" y="135.43749999999997">
+    1. MUST contain Groupmatch TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="650.4889322916665" y="150.95833333333323">
+    2. MUST contain LoadRequest TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="665.6549479166666" y="166.4791666666666">
+    3. MUST contain Signing TLVs  </text>
+  <path d="M-285.28580729166674,-558 L25.974609375,-558" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-285,-558 L-285,-558 L-277,-566 L-277,-558 L-277,-550 L-285,-558" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333371" width="23.125" x="446.12109375" y="153.14583333333326"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="446.12109375" y="166.4791666666666">
+    [2]   </text>
+  <path d="M-587.3470052083334,-558 L-286.28580729166674,-558" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-587,-558 L-587,-558 L-579,-566 L-579,-558 L-579,-550 L-587,-558" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-283.28580729166674,-557.8333333333334 C-283.28580729166674,-556.1764790839334,-284.62895304226663,-554.8333333333334,-286.28580729166674,-554.8333333333334 C-287.9426615410666,-554.8333333333334,-289.28580729166674,-556.1764790839334,-289.28580729166674,-557.8333333333334 C-289.28580729166674,-559.4901875827334,-287.9426615410666,-560.8333333333334,-286.28580729166674,-560.8333333333334 C-284.62895304226663,-560.8333333333334,-283.28580729166674,-559.4901875827334,-283.28580729166674,-557.8333333333334" fill="black" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333371" width="289.55729166666674" x="10.84375" y="182.9999999999999"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="10.84375" y="196.33333333333323">
+    [3] Schedule the load at the specified time.  </text>
+  <path d="M-587.3470052083333,-537 L-528.6803385416665,-537 Q-520.6803385416665,-537,-520.6803385416665,-529 L-520.6803385416665,-528 Q-520.6803385416665,-520,-528.6803385416665,-520 L-587.3470052083333,-520" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-587,-520 L-587,-520 L-579,-528 L-579,-520 L-579,-512 L-587,-520" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333314" width="289.55729166666663" x="312.90494791666663" y="220.61458333333326"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="312.90494791666663" y="233.9479166666666">
+    [4] Schedule the load at the specified time.  </text>
+  <path d="M-285.28580729166674,-499 L-226.619140625,-499 Q-218.619140625,-499,-218.619140625,-491 L-218.619140625,-490 Q-218.619140625,-482,-226.619140625,-482 L-285.28580729166674,-482" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-285,-483 L-285,-483 L-277,-491 L-277,-483 L-277,-475 L-285,-483" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-593,-469 L-593,-469 L-288,-469 L-280,-461 L-280,-437 L-593,-437 L-593,-469" fill="white" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-288.28580729166674,-469.2708333333334 L-288.28580729166674,-461.2708333333334 L-280.28580729166674,-461.2708333333334" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="310.84765625" y="279.3229166666666">
+    Wait random delay based on the &#34;a&#34; option.  </text>
+  <rect fill="white" height="15.333333333333314" width="126.63411458333326" x="701.52734375" y="303.60416666666663"/>
+  <rect fill="white" height="15.333333333333314" width="238.58723958333326" x="645.55078125" y="319.12499999999994"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="701.52734375" y="316.93749999999994">
+    [5] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="645.55078125" y="332.45833333333326">
+    1. MUST contain LoadResponse TLV  </text>
+  <path d="M-285.28580729166674,-392 L25.974609375,-392" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M25,-392 L25,-392 L17,-400 L17,-392 L17,-384 L25,-392" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333314" width="126.63411458333337" x="550.4967447916666" y="348.97916666666663"/>
+  <rect fill="white" height="15.333333333333314" width="238.58723958333337" x="494.52018229166663" y="364.49999999999994"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="550.4967447916666" y="362.31249999999994">
+    [6] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="494.52018229166663" y="377.83333333333326">
+    1. MUST contain LoadResponse TLV  </text>
+  <path d="M-587.3470052083334,-346 L25.974609375,-346" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M25,-346 L25,-346 L17,-354 L17,-346 L17,-338 L25,-346" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-593,-333 L-593,-333 L24,-333 L32,-325 L32,-301 L-593,-301 L-593,-333" fill="white" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M23.974609375,-333.14583333333337 L23.974609375,-325.14583333333337 L31.974609375,-325.14583333333337" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="527.0234375" y="415.44791666666663">
+    Cancel Scheduled Reload.  </text>
+  <rect fill="white" height="15.333333333333314" width="238.87369791666663" x="645.4075520833334" y="439.72916666666663"/>
+  <rect fill="white" height="15.333333333333314" width="223.30078125" x="653.1940104166667" y="455.24999999999994"/>
+  <rect fill="white" height="15.333333333333314" width="273.88020833333337" x="627.904296875" y="470.7708333333333"/>
+  <rect fill="white" height="15.333333333333371" width="191.43229166666663" x="669.1282552083334" y="486.29166666666663"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="645.4075520833334" y="453.06249999999994">
+    [7] NON POST to /c with options a, r  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="653.1940104166667" y="468.58333333333326">
+    1. MUST contain GroupMatch TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="627.904296875" y="484.10416666666663">
+    2. MUST contain CancelLoadRequest TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="669.1282552083334" y="499.62499999999994">
+    3. MUST contain Signing TLV  </text>
+  <path d="M-285.28580729166674,-225 L25.974609375,-225" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-285,-225 L-285,-225 L-277,-233 L-277,-225 L-277,-217 L-285,-225" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333371" width="23.125" x="446.12109375" y="486.29166666666663"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="446.12109375" y="499.62499999999994">
+    [8]   </text>
+  <path d="M-587.3470052083334,-225 L-286.28580729166674,-225" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-587,-225 L-587,-225 L-579,-233 L-579,-225 L-579,-217 L-587,-225" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-283.28580729166674,-224.6875 C-283.28580729166674,-223.0306457506,-284.62895304226663,-221.6875,-286.28580729166674,-221.6875 C-287.9426615410666,-221.6875,-289.28580729166674,-223.0306457506,-289.28580729166674,-224.6875 C-289.28580729166674,-226.3443542494,-287.9426615410666,-227.6875,-286.28580729166674,-227.6875 C-284.62895304226663,-227.6875,-283.28580729166674,-226.3443542494,-283.28580729166674,-224.6875" fill="black" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333371" width="177.72135416666663" x="424.74088541666663" y="516.1458333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="424.74088541666663" y="529.4791666666666">
+    [9] Cancel scheduled load.  </text>
+  <path d="M-285.28580729166674,-204 L-226.619140625,-204 Q-218.619140625,-204,-218.619140625,-196 L-218.619140625,-195 Q-218.619140625,-187,-226.619140625,-187 L-285.28580729166674,-187" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-285,-187 L-285,-187 L-277,-195 L-277,-187 L-277,-179 L-285,-187" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333371" width="186.20442708333337" x="114.19661458333326" y="553.7604166666666"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="114.19661458333326" y="567.09375">
+    [10] Cancel scheduled load.  </text>
+  <path d="M-587.3470052083334,-166 L-528.6803385416667,-166 Q-520.6803385416667,-166,-520.6803385416667,-158 L-520.6803385416667,-157 Q-520.6803385416667,-149,-528.6803385416667,-149 L-587.3470052083334,-149" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-587,-149 L-587,-149 L-579,-157 L-579,-149 L-579,-141 L-587,-149" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-593,-136 L-593,-136 L-288,-136 L-280,-128 L-280,-104 L-593,-104 L-593,-136" fill="white" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M-288.28580729166674,-136.125 L-288.28580729166674,-128.125 L-280.28580729166674,-128.125" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="310.84765625" y="612.46875">
+    Wait random delay based on the &#34;a&#34; option.  </text>
+  <rect fill="white" height="15.333333333333258" width="135.1171875" x="546.2552083333334" y="636.75"/>
+  <rect fill="white" height="15.333333333333371" width="283.75651041666674" x="471.935546875" y="652.2708333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="546.2552083333334" y="650.0833333333334">
+    [11] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="471.935546875" y="665.6041666666666">
+    1. MUST contain CancelLoadResponse TLV  </text>
+  <path d="M-587.3470052083334,-59 L25.974609375,-59" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M25,-59 L25,-59 L17,-67 L17,-59 L17,-51 L25,-59" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <rect fill="white" height="15.333333333333371" width="135.1171875" x="697.2858072916666" y="682.125"/>
+  <rect fill="white" height="15.333333333333258" width="283.75651041666674" x="622.9661458333333" y="697.6458333333334"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="697.2858072916666" y="695.4583333333334">
+    [12] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="622.9661458333333" y="710.9791666666667">
+    1. MUST contain CancelLoadResponse TLV  </text>
+  <path d="M-285.28580729166674,-13 L25.974609375,-13" fill="none" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+  <path d="M25,-13 L25,-13 L17,-21 L17,-13 L17,-5 L25,-13" fill="black" stroke="black" stroke-width="1" transform="translate(894.5 727.5)"/>
+</svg>
