@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg baseProfile="tiny" height="618" version="1.2" viewBox="0 0 851 618" width="851" xmlns="http://www.w3.org/2000/svg">
+  <path d="M-558,-527.9791666666667 L-558,0" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="185.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="197.31380208333326" y="36.57291666666671">
+    Device1  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="185.5" y="575.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="197.31380208333326" y="596.59375">
+    Device1  </text>
+  <path d="M-264,-527.9791666666667 L-264,0" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="479.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="491.48958333333326" y="36.57291666666671">
+    Device2  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="77" x="479.5" y="575.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="491.48958333333326" y="596.59375">
+    Device2  </text>
+  <path d="M26,-527.9791666666667 L26,0" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="53" x="782.5" y="15.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="794.00390625" y="36.57291666666671">
+    NMS  </text>
+  <rect fill="white" height="32" stroke="black" stroke-width="1" width="53" x="782.5" y="575.5"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="794.00390625" y="596.59375">
+    NMS  </text>
+  <path d="M-564,-515 L-564,-515 L24,-515 L32,-507 L32,-483 L-564,-483 L-564,-515" fill="white" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M23.974609375,-514.6458333333334 L23.974609375,-506.64583333333337 L31.974609375,-506.64583333333337" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="416.60611979166663" y="81.94791666666659">
+    Disseminate Firmware Details  </text>
+  <rect fill="white" height="15.333333333333314" width="238.87369791666674" x="544.3157552083333" y="106.22916666666657"/>
+  <rect fill="white" height="15.333333333333314" width="223.30078125" x="552.1022135416666" y="121.74999999999989"/>
+  <rect fill="white" height="15.333333333333314" width="252.06380208333326" x="537.720703125" y="137.27083333333326"/>
+  <rect fill="white" height="15.333333333333314" width="198.37890625" x="564.5631510416666" y="152.79166666666657"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="544.3157552083333" y="119.5624999999999">
+    [1] NON POST to /c with options a, r  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="552.1022135416666" y="135.08333333333323">
+    1. MUST contain GroupMatch TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="537.720703125" y="150.6041666666666">
+    2. MUST contain TransferRequest TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="564.5631510416666" y="166.12499999999991">
+    3. MUST contain Signing TLVs  </text>
+  <path d="M-263.46940104166674,-406 L25.974609375,-406" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-263,-406 L-263,-406 L-255,-414 L-255,-406 L-255,-398 L-263,-406" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333314" width="23.125" x="359.88020833333326" y="152.79166666666657"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.88020833333326" y="166.12499999999991">
+    [2]   </text>
+  <path d="M-557.6451822916667,-406 L-264.46940104166674,-406" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-557,-406 L-557,-406 L-549,-414 L-549,-406 L-549,-398 L-557,-406" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-261.46940104166674,-406.1875000000001 C-261.46940104166674,-404.5306457506001,-262.81254679226674,-403.1875000000001,-264.46940104166674,-403.1875000000001 C-266.12625529106674,-403.1875000000001,-267.46940104166674,-404.5306457506001,-267.46940104166674,-406.1875000000001 C-267.46940104166674,-407.8443542494001,-266.12625529106674,-409.1875000000001,-264.46940104166674,-409.1875000000001 C-262.81254679226674,-409.1875000000001,-261.46940104166674,-407.8443542494001,-261.46940104166674,-406.1875000000001" fill="black" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333314" width="207.6953125" x="10.407552083333258" y="182.64583333333326"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="10.407552083333258" y="195.9791666666666">
+    [3] Store file meta information.  </text>
+  <path d="M-557.6451822916667,-385 L-498.97851562500006,-385 Q-490.97851562500006,-385,-490.97851562500006,-377 L-490.97851562500006,-376 Q-490.97851562500006,-368,-498.97851562500006,-368 L-557.6451822916667,-368" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-557,-369 L-557,-369 L-549,-377 L-549,-369 L-549,-361 L-557,-369" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333314" width="207.69531249999994" x="304.5833333333333" y="220.26041666666657"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="304.5833333333333" y="233.59374999999991">
+    [4] Store file meta information.  </text>
+  <path d="M-263.46940104166674,-347 L-204.802734375,-347 Q-196.802734375,-347,-196.802734375,-339 L-196.802734375,-338 Q-196.802734375,-330,-204.802734375,-330 L-263.46940104166674,-330" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-263,-331 L-263,-331 L-255,-339 L-255,-331 L-255,-323 L-263,-331" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-564,-318 L-564,-318 L-266,-318 L-258,-310 L-258,-286 L-564,-286 L-564,-318" fill="white" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-266.46940104166674,-317.6250000000001 L-266.46940104166674,-309.6250000000001 L-258.46940104166674,-309.6250000000001" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="224.60677083333326" y="278.9687499999999">
+    Wait random delay based on the &#34;a&#34; option.  </text>
+  <rect fill="white" height="15.333333333333314" width="126.63411458333326" x="600.435546875" y="303.24999999999994"/>
+  <rect fill="white" height="15.333333333333371" width="261.94010416666674" x="532.7825520833333" y="318.77083333333326"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="600.435546875" y="316.58333333333326">
+    [5] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="532.7825520833333" y="332.1041666666666">
+    1. MUST contain TransferResponse TLV  </text>
+  <path d="M-263.46940104166674,-240 L25.974609375,-240" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M25,-240 L25,-240 L17,-248 L17,-240 L17,-232 L25,-240" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333314" width="126.63411458333331" x="453.34765624999994" y="348.625"/>
+  <rect fill="white" height="15.333333333333314" width="261.94010416666674" x="385.69466145833326" y="364.1458333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="453.34765624999994" y="361.9583333333333">
+    [6] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="385.69466145833326" y="377.47916666666663">
+    1. MUST contain TransferResponse TLV  </text>
+  <path d="M-557.6451822916667,-195 L25.974609375,-195" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M25,-195 L25,-195 L17,-203 L17,-195 L17,-187 L25,-195" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-564,-182 L-564,-182 L24,-182 L32,-174 L32,-149 L-564,-149 L-564,-182" fill="white" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M23.974609375,-181.5 L23.974609375,-173.5 L31.974609375,-173.5" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="442.25716145833326" y="415.09374999999994">
+    Transfer Image Blocks  </text>
+  <rect fill="white" height="15.333333333333314" width="126.63411458333326" x="600.435546875" y="439.375"/>
+  <rect fill="white" height="15.333333333333314" width="223.30078125" x="552.1022135416666" y="454.8958333333333"/>
+  <rect fill="white" height="15.333333333333314" width="219.55078125" x="553.9772135416666" y="470.4166666666667"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="600.435546875" y="452.7083333333333">
+    [7] NON POST to /c  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="552.1022135416666" y="468.22916666666663">
+    1. MUST contain GroupMatch TLV  </text>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="553.9772135416666" y="483.75">
+    2. MUST contain ImageBlock TLV  </text>
+  <path d="M-263.46940104166674,-89 L25.974609375,-89" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-263,-89 L-263,-89 L-255,-97 L-255,-89 L-255,-81 L-263,-89" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333371" width="23.125" x="359.88020833333326" y="470.41666666666663"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.88020833333326" y="483.74999999999994">
+    [8]   </text>
+  <path d="M-557.6451822916667,-89 L-264.46940104166674,-89" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-557,-89 L-557,-89 L-549,-97 L-549,-89 L-549,-81 L-557,-89" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-261.46940104166674,-88.5625 C-261.46940104166674,-86.9056457506,-262.81254679226674,-85.5625,-264.46940104166674,-85.5625 C-266.12625529106674,-85.5625,-267.46940104166674,-86.9056457506,-267.46940104166674,-88.5625 C-267.46940104166674,-90.2193542494,-266.12625529106674,-91.5625,-264.46940104166674,-91.5625 C-262.81254679226674,-91.5625,-261.46940104166674,-90.2193542494,-261.46940104166674,-88.5625" fill="black" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333314" width="144.04296875" x="74.05989583333326" y="500.2708333333333"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="74.05989583333326" y="513.6041666666666">
+    [9] Store image block  </text>
+  <path d="M-557.6451822916667,-67 L-498.97851562500006,-67 Q-490.97851562500006,-67,-490.97851562500006,-59 L-490.97851562500006,-58 Q-490.97851562500006,-50,-498.97851562500006,-50 L-557.6451822916667,-50" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-557,-51 L-557,-51 L-549,-59 L-549,-51 L-549,-43 L-557,-51" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <rect fill="white" height="15.333333333333371" width="152.52604166666669" x="359.7526041666666" y="537.8854166666666"/>
+  <text fill="black" font-family="sans-serif" font-size="13.333333333333334" x="359.7526041666666" y="551.21875">
+    [10] Store image block  </text>
+  <path d="M-263.46940104166674,-30 L-204.802734375,-30 Q-196.802734375,-30,-196.802734375,-22 L-196.802734375,-21 Q-196.802734375,-13,-204.802734375,-13 L-263.46940104166674,-13" fill="none" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+  <path d="M-263,-13 L-263,-13 L-255,-21 L-255,-13 L-255,-5 L-263,-13" fill="black" stroke="black" stroke-width="1" transform="translate(782.5 575.5)"/>
+</svg>
