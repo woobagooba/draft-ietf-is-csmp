@@ -202,7 +202,6 @@ Class:: designates class of device for which the TLV is relevant.
 */
 
 package csmp.tlvs;
-option java_package = "com.cisco.cgms.protocols.csmp.tlvs";
 
 // TLV 1
 // A list of zero or more TLV IDs
