@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="642px" preserveAspectRatio="none" style="width:725px;height:642px;background:#FFFFFF;" version="1.1" viewBox="0 0 725 642" width="725px" zoomAndPan="magnify"><defs/><g><ellipse cx="282.1955" cy="16" fill="#222222" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="69" x="247.6955" y="136"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="252.6955" y="160.8467">Unheard</text><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="235.6955" y="286"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="240.6955" y="310.8467">Registering</text><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="122.6955" y="441"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="127.6955" y="465.8467">Registered</text><rect fill="#F1F1F1" height="40" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="279.1955" y="596"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="284.1955" y="620.8467">Down</text><!--MD5=[6589d4d3e487c7b598d53b909dcac3fe]
+link *start to Unheard--><g id="link_*start_Unheard"><path d="M282.1955,26.055 C282.1955,47.028 282.1955,99.521 282.1955,130.682 " fill="none" id="*start-to-Unheard" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="282.1955,135.866,286.1955,126.866,282.1955,130.866,278.1955,126.866,282.1955,135.866" style="stroke:#181818;stroke-width:1.0;"/><path d="M287.1955,61 L287.1955,101 L418.1955,101 L418.1955,71 L408.1955,61 L287.1955,61 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M408.1955,61 L408.1955,71 L418.1955,71 L408.1955,61 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="293.1955" y="78.0669">Device Added to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="293.1955" y="93.1997">NMS Inventory</text></g><!--MD5=[0fe8c7d6a51711a979d133f8532d6252]
+link Unheard to Registering--><g id="link_Unheard_Registering"><path d="M282.1955,176.045 C282.1955,202.651 282.1955,250.97 282.1955,280.31 " fill="none" id="Unheard-to-Registering" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="282.1955,285.558,286.1955,276.558,282.1955,280.558,278.1955,276.558,282.1955,285.558" style="stroke:#181818;stroke-width:1.0;"/><path d="M287.1955,211 L287.1955,251 L477.1955,251 L477.1955,221 L467.1955,211 L287.1955,211 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M467.1955,211 L467.1955,221 L477.1955,221 L467.1955,211 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="293.1955" y="228.0669">Device Issues Registration</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="293.1955" y="243.1997">Request to NMS</text></g><!--MD5=[9812eb615fa3321a2755c3b8c2c8d4a0]
+link Registering to Registered--><g id="link_Registering_Registered"><path d="M235.6395,308.81 C167.8385,312.534 47.0594,323.647 20.1959,356 C6,373.097 7.4768,387.778 20.1959,406 C41.9095,437.109 83.6248,450.348 117.0865,455.956 " fill="none" id="Registering-to-Registered" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="122.3825,456.792,114.1165,451.4373,117.4437,456.0122,112.8688,459.3394,122.3825,456.792" style="stroke:#181818;stroke-width:1.0;"/><path d="M25.1959,361 L25.1959,401 L234.1959,401 L234.1959,371 L224.1959,361 L25.1959,361 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M224.1959,361 L224.1959,371 L234.1959,371 L224.1959,361 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="31.1959" y="378.0669">Registration ACK and first</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="31.1959" y="393.1997">metrics received from device</text></g><!--MD5=[9aeff87fe443b9fcb9c19eb526ffe2f1]
+link Registered to Registering--><g id="link_Registered_Registering"><path d="M202.8375,440.775 C216.9285,431.744 232.3215,419.892 243.1955,406 C260.6945,383.645 271.2385,352.453 276.8715,331.09 " fill="none" id="Registered-to-Registering" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="278.1325,326.151,272.0299,333.8814,276.8953,330.9955,279.7811,335.8609,278.1325,326.151" style="stroke:#181818;stroke-width:1.0;"/><path d="M274.1955,361 L274.1955,401 L468.1955,401 L468.1955,371 L458.1955,361 L274.1955,361 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M458.1955,361 L458.1955,371 L468.1955,371 L458.1955,361 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="280.1955" y="378.0669">Device Issues Registration</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="280.1955" y="393.1997">Request to NMS</text></g><!--MD5=[e25fdcbd41dfc73b21ca9b573411ed4e]
+link Registered to Down--><g id="link_Registered_Down"><path d="M122.6395,470.227 C96.7208,477.546 66.1114,491.125 50.1959,516 C38.2191,534.719 36.0487,548.8628 50.1959,566 C78.2267,599.9552 212.3325,610.6417 273.5725,613.784 " fill="none" id="Registered-to-Down" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="278.9135,614.0483,270.1222,609.6083,273.9196,613.8012,269.7268,617.5986,278.9135,614.0483" style="stroke:#181818;stroke-width:1.0;"/><path d="M55.1959,521 L55.1959,561 L256.1959,561 L256.1959,531 L246.1959,521 L55.1959,521 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M246.1959,521 L246.1959,531 L256.1959,531 L246.1959,521 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="180" x="61.1959" y="538.0669">Device metrics not received</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="61.1959" y="553.1997">for mark-down-threshold</text></g><!--MD5=[dee1908a6093df6f858a08c14da4c9bc]
+link Down to Registered--><g id="link_Down_Registered"><path d="M300.7185,595.8237 C295.9565,574.239 285.5665,539.1684 265.1955,516 C252.0645,501.065 233.7635,489.439 216.5265,480.864 " fill="none" id="Down-to-Registered" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="211.6985,478.526,218.057,486.0472,216.1991,480.7042,221.5421,478.8462,211.6985,478.526" style="stroke:#181818;stroke-width:1.0;"/><path d="M296.1955,521 L296.1955,561 L468.1955,561 L468.1955,531 L458.1955,521 L296.1955,521 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M458.1955,521 L458.1955,531 L468.1955,531 L458.1955,521 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="302.1955" y="538.0669">Metrics report received</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="302.1955" y="553.1997">from Device</text></g><!--MD5=[98bc218f718d0d35a71207807285d79f]
+link Down to Registering--><g id="link_Down_Registering"><path d="M329.4165,611.7652 C373.7735,605.5021 462.8075,590.1707 481.1955,566 C537.7065,491.719 538.7645,429.464 481.1955,356 C463.2305,333.075 386.8545,319.431 334.1255,312.574 " fill="none" id="Down-to-Registering" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="329.0985,311.932,337.5184,317.0413,334.0581,312.5662,338.5332,309.1059,329.0985,311.932" style="stroke:#181818;stroke-width:1.0;"/><path d="M528.1955,441 L528.1955,481 L718.1955,481 L718.1955,451 L708.1955,441 L528.1955,441 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M708.1955,441 L708.1955,451 L718.1955,451 L708.1955,441 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="534.1955" y="458.0669">Device Issues Registration</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="534.1955" y="473.1997">Request to NMS</text></g><!--MD5=[163813745567572bdff2da24cbb3eba2]
+@startuml
+hide empty description
+top to bottom direction
+
+
+[*] - -> Unheard
+note on link
+  Device Added to 
+  NMS Inventory
+endnote
+
+Unheard - -> Registering
+note on link
+  Device Issues Registration
+  Request to NMS
+endnote
+
+Registering - -> Registered
+note on link
+  Registration ACK and first 
+  metrics received from device
+endnote
+
+Registered - -> Registering
+note on link
+  Device Issues Registration 
+  Request to NMS
+endnote
+
+Registered - -> Down
+note on link
+  Device metrics not received
+  for mark-down-threshold
+endnote
+
+Down - -> Registered
+note on link
+ Metrics report received 
+ from Device
+endnote
+
+
+Down - -> Registering
+note on link
+  Device Issues Registration
+  Request to NMS
+endnote
+@enduml
+
+PlantUML version 1.2022.13beta7(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
